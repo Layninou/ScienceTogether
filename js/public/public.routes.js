@@ -1,0 +1,30 @@
+(function() {
+'use strict';
+
+angular.module('public')
+.config(routeConfig);
+
+/**
+ * Configures the routes and views
+ */
+routeConfig.$inject = ['$stateProvider'];
+function routeConfig ($stateProvider) {
+  // Routes
+  $stateProvider
+    .state('public', {
+      absract: true,
+      templateUrl: 'js/public/public.html'
+    })
+    .state('public.home', {
+      url: '/',
+      templateUrl: 'js/public/home/snippet/home.html'
+    })
+  //MosquitoMapper view
+    .state('public.mosquitomapper',{
+      url: '/mosquitomapper',
+      templateUrl: 'js/public/mosquitomapper/snippet/mosquito.html',
+    });
+
+}
+
+})();

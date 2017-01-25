@@ -1,0 +1,182 @@
+/*About all home*/
+#home-section-content {
+  width: 100%;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+#home-elements {
+  width: 100%;
+  padding: 0px;
+  list-style: none;
+}
+
+.container{
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.elements{
+  width: 100%;
+}
+
+/*About every section*/
+.list-elements{
+  width: 100%;
+  height: 150px;
+}
+
+.home-elements-box{
+  position: relative;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+}
+
+.home-elements-box h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.home-elements-box p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.home-elements-box span {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/*About each section*/
+
+/*
+A faire à partir d'ici, construire un media autour de ce CSS car c'est seulement
+pour de l'écran large
+*/
+
+/*PRESENTATION*/
+.home-presentation-box{
+  border-style: solid;
+  border-width: 1px;
+  background-color: #0066CC;
+  height: 200px;
+}
+
+.home-presentation-left div{
+  border-style: solid;
+  border-width: 1px;
+}
+
+.home-presentation-picture{
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+  background-color: #808080;
+  opacity: 0.5;
+}
+
+#picture-camille{
+  margin-left: 125px;
+  float: left;
+}
+
+#picture-theophile{
+  margin-right: 125px;
+  float:right;
+}
+
+.home-presentation-text{
+  height: 150px;
+}
+
+.home-presentation-text p{
+  width: 300px;
+  margin-top: 20px;
+}
+
+#presentation-camille{
+  margin-right: 125px;
+}
+
+#presentation-theophile{
+  float: left;
+  margin-left: 125px
+}
+
+#presentation-camille p{
+  text-align: left;
+  margin-left: 120px;
+}
+
+#presentation-theophile p{
+  text-align: right;
+  width: 500px;
+  padding-right: 200px;
+}
+
+/*COMPANY*/
+.home-company-title{
+  /*border-style: solid;
+  border-width: 1px;
+  border-color: blue;*/
+  background-color: #54FF59;
+}
+
+.home-company-content{
+  /*border-style: solid;
+  border-width: 1px;
+  border-color: blue;*/
+  background-color: #33FF99;
+}
+
+/*IDEOLOGY*/
+.home-ideology-title{
+  /*border-style: solid;
+  border-width: 1px;
+  border-color: green;*/
+  background-color: #004EE7;
+  float: right;
+}
+
+.home-ideology-content{
+  /*border-style: solid;
+  border-width: 1px;
+  border-color: green;*/
+  background-color: #0066CC;
+}
+
+/*PROJECTS*/
+.home-projects-title{
+  /*border-style: solid;
+  border-width: 1px;
+  border-color: yellow;*/
+  background-color: #54FF59;
+}
+
+.home-projects-content{
+  /*border-style: solid;
+  border-width: 1px;
+  border-color: yellow;*/
+  background-color: #33FF99;
+}
+
+/*BLOG*/
+#home-blog{
+  height: 100%;
+  background-color: #0066CC;
+}

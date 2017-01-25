@@ -1,0 +1,44 @@
+/*About all Mosquito Project*/
+#mosquito-mapper-content{
+  box-sizing: border-box;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+
+#mosquito-elements{
+  box-sizing: border-box;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+
+.projects-presentation-title{
+  float: right;
+  height: 100%;
+  background-color: #DAC540;
+}
+
+.projects-presentation-content{
+  height: 100%;
+  background-color: #D8BF23;
+}
+
+#projects-title-elements{
+  height: 80px;
+  text-align: center;
+  background-color: #D2D823;
+
+}
+#projects-title-elements h2{
+  padding: 5px;
+  margin-left: 400px;
+  margin-right: 400px;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+}
+
+#projects-description{
+  background-color: #D8BF23;
+}

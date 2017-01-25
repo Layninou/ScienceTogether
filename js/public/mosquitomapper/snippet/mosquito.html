@@ -1,0 +1,22 @@
+<div id="mosquito-mapper-content" class="container" ng-controller="MosquitoMapperFireCtrl as ctrl">
+  <ul id="mosquito-elements" class="elements projects-elements">
+    <li id="projects-presentation" class="projects-list-elements list-elements">
+      <div class="projects-presentation-title projects-presentation-title col-xs-12 col-md-3">
+        mosquito mapper img
+      </div>
+      <div class="projects-presentation-content col-xs-12 col-md-9">
+        <h2>Mosquito Mapper</h2>
+      </div>
+    </li>
+    <li id="projects-title-elements" class="projects-list-elements list-elements col-xs-12">
+      <h2>Number of elements collected {N}</h2>
+    </li>
+    <li id="projects-description" class="projects-list-elements list-elements col-xs-12">
+      <div id="test">
+        <pre>
+{{ ctrl.object | json }}
+        </pre>
+      </div>
+    </li>
+  </ul>
+</div>
