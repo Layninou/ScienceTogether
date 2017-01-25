@@ -10,6 +10,8 @@
   firebase.initializeApp(config);
 
   //This is for test only
+  console.log("Seriously, who read the console message?");
+  console.log("Here is some test, for personal purpose");
   //create firebase reference
   const rootRefTest = firebase.database().ref().child('Pictures');
   //Sync object changes
