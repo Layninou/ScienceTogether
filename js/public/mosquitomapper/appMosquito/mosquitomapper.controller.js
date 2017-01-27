@@ -6,13 +6,15 @@
 angular.module('appMosquito')
 .controller('MosquitoMapperFireCtrl', MosquitoMapperFireCtrl);
 
-MosquitoMapperFireCtrl.$inject = ['$firebaseObject'];
-function MosquitoMapperFireCtrl($firebaseObject) {
+MosquitoMapperFireCtrl.$inject = ['$timeout', 'MosquitoMapperFireService'];
+function MosquitoMapperFireCtrl($timeout, MosquitoMapperFireService) {
     var $ctrl = this;
+    $ctrl.idNumber = 0;
 
-    const rootRef = firebase.database().ref();
-    const ref = rootRef.child('Pictures');
-    $ctrl.object = $firebaseObject(ref);
+    $timeout(function () {
+      //number of object in identifications
+      $ctrl.idNumber = MosquitoMapperFireService.getNumberIdentification();
+    }, 2000);
 }
 
 })();
