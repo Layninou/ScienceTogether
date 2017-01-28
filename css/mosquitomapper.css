@@ -30,6 +30,16 @@
   background-color: #D2D823;
 }
 
+#projects-quizz h2{
+  text-align: center;
+  padding: 5px;
+  margin-left: 400px;
+  margin-right: 400px;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+}
+
 /*IDENTIFICATION*/
 
 #projects-identification{

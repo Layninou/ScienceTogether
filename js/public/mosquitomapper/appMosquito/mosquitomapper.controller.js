@@ -10,6 +10,10 @@ MosquitoMapperFireCtrl.$inject = ['$timeout', 'MosquitoMapperFireService'];
 function MosquitoMapperFireCtrl($timeout, MosquitoMapperFireService) {
     var $ctrl = this;
 
+    //Quizz
+    $ctrl.quizzNumber = 0;
+
+    //Identification
     $ctrl.idNumber = 0;
     $ctrl.antennaeNOTA = 0;
     $ctrl.antennaeType1 = 0;
@@ -22,6 +26,9 @@ function MosquitoMapperFireCtrl($timeout, MosquitoMapperFireService) {
     $ctrl.wingsType2 = 0;
 
     $timeout(function () {
+      //number of object in quizzs
+      $ctrl.quizzNumber = MosquitoMapperFireService.getNumberQuizz();
+
       //number of object in identifications
       $ctrl.idNumber = MosquitoMapperFireService.getNumberIdentification();
       $ctrl.antennaeNOTA = MosquitoMapperFireService.getNumberAntennaeNOTA();
@@ -33,7 +40,7 @@ function MosquitoMapperFireCtrl($timeout, MosquitoMapperFireService) {
       $ctrl.wingsNOTA = MosquitoMapperFireService.getNumberWingsNOTA();
       $ctrl.wingsType1 = MosquitoMapperFireService.getNumberWingsType1();
       $ctrl.wingsType2 = MosquitoMapperFireService.getNumberWingsType2();
-    }, 2000);
+    }, 5000);
 }
 
 })();
