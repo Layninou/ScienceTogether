@@ -81,6 +81,37 @@ function MosquitoMapperFireService($q, $firebaseObject, $firebaseArray) {
     return lengthIdentification;
   };
 
+    //Antennae
+  service.getNumberAntennaeType1 = function () {
+    return antennaeType1;
+  };
+  service.getNumberAntennaeType2 = function () {
+    return antennaeType2;
+  };
+  service.getNumberAntennaeNOTA = function () {
+    return noneOfTheAboveAntennae;
+  };
+    //Mouthpiece
+  service.getNumberMouthpieceType1 = function () {
+    return mouthpieceType1;
+  };
+  service.getNumberMouthpieceType2 = function () {
+    return mouthpieceType2;
+  };
+  service.getNumberMouthpieceNOTA = function () {
+    return noneOfTheAboveMouthpiece;
+  };
+    //Wings
+  service.getNumberWingsType1 = function () {
+    return wingsType1;
+  };
+  service.getNumberWingsType2 = function () {
+    return wingsType2;
+  };
+  service.getNumberWingsNOTA = function () {
+    return noneOfTheAboveWings;
+  };
+
 }
 
 })();

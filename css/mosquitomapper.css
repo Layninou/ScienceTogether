@@ -24,13 +24,22 @@
   background-color: #D8BF23;
 }
 
-#projects-title-elements{
-  height: 180px;
-  text-align: center;
+/*QUIZZ*/
+
+#projects-quizz{
   background-color: #D2D823;
+}
+
+/*IDENTIFICATION*/
+
+#projects-identification{
+  height: 580px;
+  text-align: center;
+  background-color: #D8BF23;
 
 }
-#projects-title-elements h2{
+
+#projects-identification h2{
   padding: 5px;
   margin-left: 400px;
   margin-right: 400px;
@@ -39,6 +48,26 @@
   border-style: solid;
 }
 
-#projects-description{
-  background-color: #D8BF23;
+#antennae-identification-area{
+  padding: 15px;
+  border-style: solid;
+  border-color: #D8BF23;
+  border-radius: 25px;
+  background-color: #FF69B4;
+}
+
+#mouthpiece-identification-area{
+  padding: 15px;
+  border-style: solid;
+  border-color: #D8BF23;
+  border-radius: 25px;
+  background-color: #FF69B4;
+}
+
+#wings-identification-area{
+  padding: 15px;
+  border-style: solid;
+  border-color: #D8BF23;
+  border-radius: 25px;
+  background-color: #FF69B4;
 }

@@ -8,11 +8,34 @@
         <h2>Mosquito Mapper</h2>
       </div>
     </li>
-    <li id="projects-title-elements" class="projects-list-elements list-elements col-xs-12">
-      <h2>Number of elements collected <span>{{ ctrl.idNumber }}</span></h2>
-    </li>
-    <li id="projects-description" class="projects-list-elements list-elements col-xs-12">
+    <li id="projects-quizz" class="projects-list-elements list-elements col-xs-12">
 
+    </li>
+    <li id="projects-identification" class="projects-list-elements list-elements col-xs-12 col-md-12">
+      <span class="col-xs-12"><h2>Number of elements identified <span>{{ ctrl.idNumber }}</span></h2></span>
+      <div class="all-identification-area col-xs-12">
+        <div id="antennae-identification-area" class="mosquito-mapper-data-div col-xs-12 col-md-4">
+          <p>
+            number of TYPEA : {{ ctrl.antennaeType1 }}<br>
+            number of TYPEB : {{ ctrl.antennaeType2 }}<br>
+            number of None  : {{ ctrl.antennaeNOTA  }}<br>
+          </p>
+        </div>
+        <div id="mouthpiece-identification-area" class="mosquito-mapper-data-div col-xs-12 col-md-4">
+          <p>
+            number of TYPEA : {{ ctrl.mouthpieceType1 }}<br>
+            number of TYPEB : {{ ctrl.mouthpieceType2 }}<br>
+            number of None  : {{ ctrl.mouthpieceNOTA  }}<br>
+          </p>
+        </div>
+        <div id="wings-identification-area" class="mosquito-mapper-data-div col-xs-12 col-md-4">
+          <p>
+            number of TYPEA : {{ ctrl.wingsType1 }}<br>
+            number of TYPEB : {{ ctrl.wingsType2 }}<br>
+            number of None  : {{ ctrl.wingsNOTA  }}<br>
+          </p>
+        </div>
+      </div>
     </li>
   </ul>
 </div>

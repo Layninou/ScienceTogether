@@ -9,11 +9,30 @@ angular.module('appMosquito')
 MosquitoMapperFireCtrl.$inject = ['$timeout', 'MosquitoMapperFireService'];
 function MosquitoMapperFireCtrl($timeout, MosquitoMapperFireService) {
     var $ctrl = this;
+
     $ctrl.idNumber = 0;
+    $ctrl.antennaeNOTA = 0;
+    $ctrl.antennaeType1 = 0;
+    $ctrl.antennaeType2 = 0;
+    $ctrl.mouthpieceNOTA = 0;
+    $ctrl.mouthpieceType1 = 0;
+    $ctrl.mouthpieceType2 = 0;
+    $ctrl.wingsNOTA = 0;
+    $ctrl.wingsType1 = 0;
+    $ctrl.wingsType2 = 0;
 
     $timeout(function () {
       //number of object in identifications
       $ctrl.idNumber = MosquitoMapperFireService.getNumberIdentification();
+      $ctrl.antennaeNOTA = MosquitoMapperFireService.getNumberAntennaeNOTA();
+      $ctrl.antennaeType1 = MosquitoMapperFireService.getNumberAntennaeType1();
+      $ctrl.antennaeType2 = MosquitoMapperFireService.getNumberAntennaeType2();
+      $ctrl.mouthpieceNOTA = MosquitoMapperFireService.getNumberMouthpieceNOTA();
+      $ctrl.mouthpieceType1 = MosquitoMapperFireService.getNumberMouthpieceType1();
+      $ctrl.mouthpieceType2 = MosquitoMapperFireService.getNumberMouthpieceType2();
+      $ctrl.wingsNOTA = MosquitoMapperFireService.getNumberWingsNOTA();
+      $ctrl.wingsType1 = MosquitoMapperFireService.getNumberWingsType1();
+      $ctrl.wingsType2 = MosquitoMapperFireService.getNumberWingsType2();
     }, 2000);
 }
 

@@ -12,9 +12,9 @@
   //This is for test only
   console.log("Seriously, who read the console message?");
   console.log("Here is some test, for personal purpose");
-  //create firebase reference
-  const rootRefTest = firebase.database().ref().child('Identifications');
-  //Sync object changes
-  rootRefTest.on('value', snap => console.log(snap.val()));
+  // //create firebase reference
+  // const rootRefTest = firebase.database().ref().child('Identifications');
+  // //Sync object changes
+  // rootRefTest.on('value', snap => console.log(snap.val()));
 
 })();
