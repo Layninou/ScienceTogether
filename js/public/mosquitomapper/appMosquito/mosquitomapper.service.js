@@ -128,7 +128,7 @@ function MosquitoMapperFireService($q, $firebaseObject, $firebaseArray) {
 
       //Mosquito Inside or Outside
       if (placeMosquito === 1) { mosquitoInside++; }
-      if (placeMosquito === 1) { mosquitoOutside++; }
+      if (placeMosquito === 2) { mosquitoOutside++; }
 
       //Mosquito around water
       if (bodywarm === 1) { mosquitoWaterYes++; }
