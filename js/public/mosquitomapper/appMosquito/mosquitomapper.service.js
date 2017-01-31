@@ -208,6 +208,12 @@ function MosquitoMapperFireService($q, $firebaseObject, $firebaseArray) {
   service.getNumberQuizz = function () {
     return lengthQuizz;
   };
+  service.getArrayTemperature = function() {
+    return [mosquitoTemperature0, mosquitoTemperature10, mosquitoTemperature20, mosquitoTemperatureUpper];
+  };
+  service.getNumberPicture = function() {
+    return mosquitoWithPicture;
+  }
 
     //Antennae
   service.getNumberAntennaeType1 = function () {

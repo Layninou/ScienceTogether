@@ -8,25 +8,21 @@ angular.module('appMosquito')
 
 MosquitoMapperPieService.$inject = [];
 function MosquitoMapperPieService() {
-
   var service = this;
 
-  //Useful Attributs
-  var colist = ["#99FF77","#1A75FF","#FF5050"];
-  var datalistTest = [29,17,18];
+  //Colors Attributs
+  var colorIdentificationList = ["#99FF77","#1A75FF","#FF5050"];
+  var colorTemperature = ["#1a1aff","#8080FF","#FF9999","#FF0000"];
 
   //Canvas and context Attributs
   var canvasAntennae   = document.getElementById("mosquitomapper-antennae-canvas");
   var canvasMouthpiece = document.getElementById("mosquitomapper-mouthpiece-canvas");
   var canvasWings      = document.getElementById("mosquitomapper-wings-canvas");
+  var canvasTemperature = document.getElementById("temperature-mosquitoes-canvas");
   var contextAntennae   = canvasAntennae.getContext("2d");
   var contextMouthpiece = canvasMouthpiece.getContext("2d");
   var contextWings      = canvasWings.getContext("2d");
-
-  //Get Values
-  var antennaeDatalist = [];
-  var mouthpieceDataList = [];
-  var wingsDataList = [];
+  var contextTemperature = canvasTemperature.getContext("2d");
 
   //Get Labels
   var antennaeLabels = [];
@@ -41,9 +37,10 @@ function MosquitoMapperPieService() {
   wingsLabels.push(document.getElementById("wings-label-type-a").innerHTML);
   wingsLabels.push(document.getElementById("wings-label-type-b").innerHTML);
   wingsLabels.push(document.getElementById("wings-label-type-c").innerHTML);
+  var temperatureLabels = ["< 0C","< 10C","< 20C","> 20C"]
 
   //This service create the pie an canvas
-  function pie(ctx, w, h, datalist, datalabel) {
+  function pie(ctx, w, h, datalist, datalabel, colorlist) {
 
     var radius = h / 2 - 5;
     var centerx = w / 2;
@@ -63,7 +60,7 @@ function MosquitoMapperPieService() {
     for (var i = 0; i < datalist.length; i++) {
       var thispart = datalist[i];
       ctx.beginPath();
-      ctx.fillStyle = colist[i];
+      ctx.fillStyle = colorlist[i];
       ctx.moveTo(centerx,centery);
       var arcsector = Math.PI * (2 * thispart / total);
       ctx.arc(centerx,centery,radius, lastend - offset, lastend + arcsector - offset, false);
@@ -91,13 +88,16 @@ function MosquitoMapperPieService() {
 
   //Service of creating pie
   service.createAntennaePie = function(dataList) {
-    pie(contextAntennae, canvasAntennae.width, canvasAntennae.height, dataList, antennaeLabels);
+    pie(contextAntennae, canvasAntennae.width, canvasAntennae.height, dataList, antennaeLabels, colorIdentificationList);
   }
   service.createMouthpiecePie = function(dataList) {
-    pie(contextMouthpiece, canvasMouthpiece.width, canvasMouthpiece.height, dataList, mouthpieceLabels);
+    pie(contextMouthpiece, canvasMouthpiece.width, canvasMouthpiece.height, dataList, mouthpieceLabels, colorIdentificationList);
   }
   service.createWingsPie =function(dataList) {
-    pie(contextWings, canvasWings.width, canvasWings.height, dataList, wingsLabels);
+    pie(contextWings, canvasWings.width, canvasWings.height, dataList, wingsLabels, colorIdentificationList);
+  }
+  service.createTemperaturePie = function(dataList){
+    pie(contextTemperature, canvasTemperature.width, canvasTemperature.height, dataList, temperatureLabels, colorTemperature);
   }
 
 }

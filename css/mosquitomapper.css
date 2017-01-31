@@ -28,7 +28,7 @@
 
 #projects-quizz{
   background-color: #D2D823;
-  height: 800px;
+  height: 2470px;
 }
 
 #projects-quizz h2{
@@ -41,8 +41,93 @@
   border-style: solid;
 }
 
+#projects-quizz canvas{
+  background-color: #808080;
+  border-radius: 25px;
+}
+
 .map-mosquito{
   margin-top: 20px;
+}
+
+.daytime-mosquitoes{
+  margin-top: 30px;
+}
+
+.daytime-mosquitoes h3{
+  margin-bottom: 5px;
+}
+
+.daytime-mosquitoes canvas{
+  margin-top: 5px;
+}
+
+.number-mosquitoes{
+  position: relative;
+}
+
+.text-number-mosquitoes{
+  height: 300px;
+  float: left;
+  position: relative;
+  text-align: center;
+  align-items: center;
+}
+
+.elements-text-number-mosquitoes{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.pie-number-mosquitoes{
+  float: right;
+}
+
+.size-mosquitoes{
+  position: relative;
+}
+
+.text-size-mosquitoes{
+  height: 300px;
+  position: relative;
+  text-align: center;
+  align-items: center;
+}
+
+.elements-text-size-mosquitoes{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.temperature-mosquitoes{
+  position: relative;
+}
+
+.text-temperature-mosquitoes{
+  height: 300px;
+  float: left;
+  position: relative;
+  text-align: center;
+  align-items: center;
+}
+
+.elements-text-temperature-mosquitoes{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.pie-temperature-mosquitoes{
+  float: right;
+}
+
+.picture-mosquitoes{
+  margin-top: 30px;
 }
 
 /*IDENTIFICATION*/
@@ -64,7 +149,7 @@
 }
 
 .pie-identification canvas{
-  background-color: #808080;
+  background-color: #FF69B4;
   border-radius: 25px;
 }
 

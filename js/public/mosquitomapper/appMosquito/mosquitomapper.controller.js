@@ -12,6 +12,7 @@ function MosquitoMapperFireCtrl($timeout, MosquitoMapperFireService, MosquitoMap
 
     //Quizz
     $ctrl.quizzNumber = 0;
+    $ctrl.nbPictures = 0;
 
     //Identification
     $ctrl.idNumber = 0;
@@ -28,6 +29,11 @@ function MosquitoMapperFireCtrl($timeout, MosquitoMapperFireService, MosquitoMap
     $timeout(function () {
       //number of object in quizzs
       $ctrl.quizzNumber = MosquitoMapperFireService.getNumberQuizz();
+      $ctrl.nbPictures = MosquitoMapperFireService.getNumberPicture();
+
+      //Create Pie about Quizz
+      var temperatureData = MosquitoMapperFireService.getArrayTemperature();
+      MosquitoMapperPieService.createTemperaturePie(temperatureData);
 
       //number of object in identifications
       $ctrl.idNumber = MosquitoMapperFireService.getNumberIdentification();

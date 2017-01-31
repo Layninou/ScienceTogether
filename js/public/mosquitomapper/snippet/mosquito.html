@@ -10,41 +10,120 @@
     </li>
     <li id="projects-quizz" class="projects-list-elements list-elements col-xs-12">
       <span class="col-xs-12"><h2>Number of elements declared <span>{{ ctrl.quizzNumber }}</span></h2></span>
-      <div class="map-mosquito text-center col-md-12">
+      <div class="map-mosquitoes text-center col-md-12">
         <img src="images/WorldMap.jpg" alt="World Map of Mosquitoes" width="1200" height="500" />
+      </div>
+      <div class="daytime-mosquitoes text-center col-md-12">
+        <h3>When did you find our mosquitoes</h3> <br>
+        <canvas id="daytime-mosquitoes-canvas" width="1350" height="400"></canvas>
+      </div>
+      <!-- Error here about data -->
+      <div class="number-mosquitoes text-center col-md-12">
+        <div class="pie-number-mosquitoes col-md-4 col-xs-12">
+          <canvas id="number-mosquitoes-canvas" width="300" height="300"></canvas>
+        </div>
+        <div class="text-number-mosquitoes col-md-8">
+          <div class="elements-text-number-mosquitoes">
+            <h3>Mosquitoes are in number or alone</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="size-mosquitoes text-center col-md-12">
+        <div class="pie-size-mosquitoes col-md-4">
+          <canvas id="size-mosquitoes-canvas" width="300" height="300"></canvas>
+        </div>
+        <div class="text-size-mosquitoes col-md-8">
+          <div class="elements-text-size-mosquitoes">
+            <h3>Size of the mosquitoes</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Error stop here -->
+      <div class="temperature-mosquitoes text-center col-md-12">
+        <div class="pie-temperature-mosquitoes col-md-4">
+          <canvas id="temperature-mosquitoes-canvas" width="300" height="300"></canvas>
+        </div>
+        <div class="text-temperature-mosquitoes col-md-8">
+          <div class="elements-text-temperature-mosquitoes">
+            <h3>Temperature around mosquitoes</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center col-md-12">
+        <div class="place-mosquitoes col-md-6">
+          <div class="text-place-mosquitoes col-md-12">
+            <div class="elements-text-place-mosquitoes">
+              <h3>Are mosquitoes inside or outside</h3>
+            </div>
+          </div>
+          <div class="graph-place-mosquitoes col-md-12">
+            <canvas id="place-mosquitoes-canvas" width="300" height="300"></canvas>
+          </div>
+        </div>
+        <div class="water-mosquitoes col-md-6">
+          <div class="text-place-mosquitoes col-md-12">
+            <div class="elements-text-place-mosquitoes">
+              <h3>Are mosquitoes inside or outside</h3>
+            </div>
+          </div>
+          <div class="graph-place-mosquitoes col-md-12">
+            <canvas id="place-mosquitoes-canvas" width="300" height="300"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="picture-mosquitoes text-center col-md-12">
+        <h3>Number of mosquitoes you take in picture: {{ ctrl.nbPictures }}</h3>
       </div>
     </li>
     <li id="projects-identification" class="projects-list-elements list-elements col-xs-12 col-md-12">
       <span class="col-xs-12"><h2>Number of elements identified <span>{{ ctrl.idNumber }}</span></h2></span>
       <div class="all-identification-area col-xs-12">
-        <div id="antennae-identification-area" class="mosquito-mapper-data-div col-xs-12 col-md-4">
+        <div id="wings-identification-area" class="mosquito-mapper-data-div col-xs-12 col-md-4">
           <p>
-            number of <span id="antennae-label-type-a">TYPEA</span> : <span id="antenae-value-type-a">{{ ctrl.antennaeType1 }}</span> <br>
-            number of <span id="antennae-label-type-b">TYPEB</span> : <span id="antenae-value-type-b">{{ ctrl.antennaeType2 }}</span> <br>
-            number of <span id="antennae-label-type-c">None</span>  : <span id="antenae-value-type-c">{{ ctrl.antennaeNOTA  }}</span> <br>
+            <span id="wings-label-type-a">No Mosquitoes</span> : <span id="wings-value-type-a">{{ ctrl.wingsType1 }}</span><br>
+            <span id="wings-label-type-b">Mosquitoes</span> : <span id="wings-value-type-b">{{ ctrl.wingsType2 }}</span><br>
+            <span id="wings-label-type-c">Not define </span> : <span id="wings-value-type-c">{{ ctrl.wingsNOTA  }}</span><br>
           </p>
           <div class="pie-identification pie-identification-antennae">
-            <canvas id="mosquitomapper-antennae-canvas" width="300" height="300"></canvas>
+            <canvas id="mosquitomapper-wings-canvas" width="300" height="300"></canvas>
           </div>
         </div>
         <div id="mouthpiece-identification-area" class="mosquito-mapper-data-div col-xs-12 col-md-4">
           <p>
-            number of <span id="mouthpiece-label-type-a">TYPEA</span> : <span id="mouthpiece-value-type-a">{{ ctrl.mouthpieceType1 }}</span><br>
-            number of <span id="mouthpiece-label-type-b">TYPEB</span> : <span id="mouthpiece-value-type-b">{{ ctrl.mouthpieceType2 }}</span><br>
-            number of <span id="mouthpiece-label-type-c">None </span> : <span id="mouthpiece-value-type-c">{{ ctrl.mouthpieceNOTA  }}</span><br>
+            number of <span id="mouthpiece-label-type-a">Anophile</span> : <span id="mouthpiece-value-type-a">{{ ctrl.mouthpieceType1 }}</span><br>
+            number of <span id="mouthpiece-label-type-b">Other</span> : <span id="mouthpiece-value-type-b">{{ ctrl.mouthpieceType2 }}</span><br>
+            number of <span id="mouthpiece-label-type-c">Not define </span> : <span id="mouthpiece-value-type-c">{{ ctrl.mouthpieceNOTA  }}</span><br>
           </p>
           <div class="pie-identification pie-identification-antennae">
             <canvas id="mosquitomapper-mouthpiece-canvas" width="300" height="300"></canvas>
           </div>
         </div>
-        <div id="wings-identification-area" class="mosquito-mapper-data-div col-xs-12 col-md-4">
+        <div id="antennae-identification-area" class="mosquito-mapper-data-div col-xs-12 col-md-4">
           <p>
-            number of <span id="wings-label-type-a">TYPEA</span> : <span id="wings-value-type-a">{{ ctrl.wingsType1 }}</span><br>
-            number of <span id="wings-label-type-b">TYPEB</span> : <span id="wings-value-type-b">{{ ctrl.wingsType2 }}</span><br>
-            number of <span id="wings-label-type-c">None </span> : <span id="wings-value-type-c">{{ ctrl.wingsNOTA  }}</span><br>
+            number of <span id="antennae-label-type-a">Males</span> : <span id="antenae-value-type-a">{{ ctrl.antennaeType1 }}</span> <br>
+            number of <span id="antennae-label-type-b">Females</span> : <span id="antenae-value-type-b">{{ ctrl.antennaeType2 }}</span> <br>
+            <span id="antennae-label-type-c">Unknown</span>  : <span id="antenae-value-type-c">{{ ctrl.antennaeNOTA  }}</span> <br>
           </p>
           <div class="pie-identification pie-identification-antennae">
-            <canvas id="mosquitomapper-wings-canvas" width="300" height="300"></canvas>
+            <canvas id="mosquitomapper-antennae-canvas" width="300" height="300"></canvas>
           </div>
         </div>
       </div>
