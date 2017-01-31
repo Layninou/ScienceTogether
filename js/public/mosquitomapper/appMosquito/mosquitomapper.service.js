@@ -192,7 +192,7 @@ function MosquitoMapperFireService($q, $firebaseObject, $firebaseArray) {
     }
     console.log("Antennae : ", noneOfTheAboveAntennae, antennaeType1, antennaeType2);
     console.log("Mouthpiece : ", noneOfTheAboveMouthpiece, mouthpieceType1, mouthpieceType2);
-    console.log("Wings : ", noneOfTheAboveWings, wingsType1, wingsType1);
+    console.log("Wings : ", noneOfTheAboveWings, wingsType1, wingsType2);
     console.log("End Test Service Identification");
   }
 

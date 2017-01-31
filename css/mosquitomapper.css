@@ -42,10 +42,7 @@
 }
 
 .map-mosquito{
-  height: 450px;
-  background-color: #808080;
-  opacity: 0.5;
-  padding: 30px;
+  margin-top: 20px;
 }
 
 /*IDENTIFICATION*/
@@ -64,6 +61,11 @@
   border-width: 2px;
   border-color: black;
   border-style: solid;
+}
+
+.pie-identification canvas{
+  background-color: #808080;
+  border-radius: 25px;
 }
 
 #antennae-identification-area{

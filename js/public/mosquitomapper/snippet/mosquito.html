@@ -10,8 +10,8 @@
     </li>
     <li id="projects-quizz" class="projects-list-elements list-elements col-xs-12">
       <span class="col-xs-12"><h2>Number of elements declared <span>{{ ctrl.quizzNumber }}</span></h2></span>
-      <div class="map-mosquito col-md-12">
-
+      <div class="map-mosquito text-center col-md-12">
+        <img src="images/WorldMap.jpg" alt="World Map of Mosquitoes" width="1200" height="500" />
       </div>
     </li>
     <li id="projects-identification" class="projects-list-elements list-elements col-xs-12 col-md-12">
@@ -24,7 +24,7 @@
             number of None  : {{ ctrl.antennaeNOTA  }}<br>
           </p>
           <div class="pie-identification pie-identification-antennae">
-
+            <canvas id="mosquitomapper-antennae-canvas" width="300" height="300"></canvas>
           </div>
         </div>
         <div id="mouthpiece-identification-area" class="mosquito-mapper-data-div col-xs-12 col-md-4">
