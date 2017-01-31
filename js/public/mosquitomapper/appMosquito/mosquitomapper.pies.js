@@ -1,4 +1,106 @@
 (function() {
+"use strict";
+/**
+ * MosquitoMapper service firebase.
+ */
+angular.module('appMosquito')
+.service('MosquitoMapperPieService', MosquitoMapperPieService);
+
+MosquitoMapperPieService.$inject = [];
+function MosquitoMapperPieService() {
+
+  var service = this;
+
+  //Useful Attributs
+  var colist = ["#99FF77","#1A75FF","#FF5050"];
+  var datalistTest = [29,17,18];
+
+  //Canvas and context Attributs
+  var canvasAntennae   = document.getElementById("mosquitomapper-antennae-canvas");
+  var canvasMouthpiece = document.getElementById("mosquitomapper-mouthpiece-canvas");
+  var canvasWings      = document.getElementById("mosquitomapper-wings-canvas");
+  var contextAntennae   = canvasAntennae.getContext("2d");
+  var contextMouthpiece = canvasMouthpiece.getContext("2d");
+  var contextWings      = canvasWings.getContext("2d");
+
+  //Get Values
+  var antennaeDatalist = [];
+  var mouthpieceDataList = [];
+  var wingsDataList = [];
+
+  //Get Labels
+  var antennaeLabels = [];
+  antennaeLabels.push(document.getElementById("antennae-label-type-a").innerHTML);
+  antennaeLabels.push(document.getElementById("antennae-label-type-b").innerHTML);
+  antennaeLabels.push(document.getElementById("antennae-label-type-c").innerHTML);
+  var mouthpieceLabels = [];
+  mouthpieceLabels.push(document.getElementById("mouthpiece-label-type-a").innerHTML);
+  mouthpieceLabels.push(document.getElementById("mouthpiece-label-type-b").innerHTML);
+  mouthpieceLabels.push(document.getElementById("mouthpiece-label-type-c").innerHTML);
+  var wingsLabels = [];
+  wingsLabels.push(document.getElementById("wings-label-type-a").innerHTML);
+  wingsLabels.push(document.getElementById("wings-label-type-b").innerHTML);
+  wingsLabels.push(document.getElementById("wings-label-type-c").innerHTML);
+
+  //This service create the pie an canvas
+  function pie(ctx, w, h, datalist, datalabel) {
+
+    var radius = h / 2 - 5;
+    var centerx = w / 2;
+    var centery = h / 2;
+    var lastend = 0;
+    var offset = Math.PI / 2;
+    var labelxy = new Array();
+
+    //font for the label
+    var fontSize = Math.floor(h/ 20);
+    ctx.textAlign = 'center';
+    ctx.font = fontSize + "px Arial";
+    var total = 0;
+    for(var x = 0; x < datalist.length; x++) { total += datalist[x]; }
+
+    //creation of the part of each pie
+    for (var i = 0; i < datalist.length; i++) {
+      var thispart = datalist[i];
+      ctx.beginPath();
+      ctx.fillStyle = colist[i];
+      ctx.moveTo(centerx,centery);
+      var arcsector = Math.PI * (2 * thispart / total);
+      ctx.arc(centerx,centery,radius, lastend - offset, lastend + arcsector - offset, false);
+      ctx.lineTo(centerx,centery);
+      ctx.fill();
+      ctx.closePath();
+
+      if (thispart > (total / 20)) {
+        labelxy.push(lastend + arcsector / 2 + Math.PI + offset);
+      }
+
+      lastend += arcsector;
+    }
+
+    var lradius = radius * 3 / 4;
+    ctx.strokeStyle = "#000000";
+    ctx.fillStyle = "#000000";
+    for (var i = 0; i < labelxy.length; i++) {
+      var langle = labelxy[i];
+      var dx = centerx + lradius * Math.cos(langle);
+      var dy = centery + lradius * Math.sin(langle);
+      ctx.fillText(datalabel[i], dx, dy);
+    }
+  }
+
+  //Service of creating pie
+  service.createAntennaePie = function(dataList) {
+    pie(contextAntennae, canvasAntennae.width, canvasAntennae.height, dataList, antennaeLabels);
+  }
+  service.createMouthpiecePie = function(dataList) {
+    pie(contextMouthpiece, canvasMouthpiece.width, canvasMouthpiece.height, dataList, mouthpieceLabels);
+  }
+  service.createWingsPie =function(dataList) {
+    pie(contextWings, canvasWings.width, canvasWings.height, dataList, wingsLabels);
+  }
+
+}
 
 
 

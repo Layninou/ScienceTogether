@@ -1,7 +1,7 @@
 (function() {
 "use strict";
 /**
- * MosquitoMapper application.
+ * MosquitoMapper service firebase.
  */
 angular.module('appMosquito')
 .service('MosquitoMapperFireService', MosquitoMapperFireService);
@@ -219,6 +219,9 @@ function MosquitoMapperFireService($q, $firebaseObject, $firebaseArray) {
   service.getNumberAntennaeNOTA = function () {
     return noneOfTheAboveAntennae;
   };
+  service.getArrayAntennae = function () {
+    return [antennaeType1,antennaeType2,noneOfTheAboveAntennae];
+  };
     //Mouthpiece
   service.getNumberMouthpieceType1 = function () {
     return mouthpieceType1;
@@ -228,6 +231,9 @@ function MosquitoMapperFireService($q, $firebaseObject, $firebaseArray) {
   };
   service.getNumberMouthpieceNOTA = function () {
     return noneOfTheAboveMouthpiece;
+  };
+  service.getArrayMouthpiece = function () {
+    return [mouthpieceType1,mouthpieceType2,noneOfTheAboveMouthpiece];
   };
     //Wings
   service.getNumberWingsType1 = function () {
@@ -239,6 +245,9 @@ function MosquitoMapperFireService($q, $firebaseObject, $firebaseArray) {
   service.getNumberWingsNOTA = function () {
     return noneOfTheAboveWings;
   };
+  service.getArrayWings = function () {
+    return [wingsType1, wingsType2, noneOfTheAboveWings];
+  }
 
 }
 

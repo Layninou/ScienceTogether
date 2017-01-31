@@ -6,8 +6,8 @@
 angular.module('appMosquito')
 .controller('MosquitoMapperFireCtrl', MosquitoMapperFireCtrl);
 
-MosquitoMapperFireCtrl.$inject = ['$timeout', 'MosquitoMapperFireService'];
-function MosquitoMapperFireCtrl($timeout, MosquitoMapperFireService) {
+MosquitoMapperFireCtrl.$inject = ['$timeout', 'MosquitoMapperFireService', 'MosquitoMapperPieService'];
+function MosquitoMapperFireCtrl($timeout, MosquitoMapperFireService, MosquitoMapperPieService) {
     var $ctrl = this;
 
     //Quizz
@@ -40,6 +40,14 @@ function MosquitoMapperFireCtrl($timeout, MosquitoMapperFireService) {
       $ctrl.wingsNOTA = MosquitoMapperFireService.getNumberWingsNOTA();
       $ctrl.wingsType1 = MosquitoMapperFireService.getNumberWingsType1();
       $ctrl.wingsType2 = MosquitoMapperFireService.getNumberWingsType2();
+
+      //Create Pie about Identification
+      var antennaeData = MosquitoMapperFireService.getArrayAntennae();
+      var mouthpieceData = MosquitoMapperFireService.getArrayMouthpiece();
+      var wingsData = MosquitoMapperFireService.getArrayWings();
+      MosquitoMapperPieService.createAntennaePie(antennaeData);
+      MosquitoMapperPieService.createMouthpiecePie(mouthpieceData);
+      MosquitoMapperPieService.createWingsPie(wingsData);
     }, 5000);
 }
 
