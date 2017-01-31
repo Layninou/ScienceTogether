@@ -208,9 +208,24 @@ function MosquitoMapperFireService($q, $firebaseObject, $firebaseArray) {
   service.getNumberQuizz = function () {
     return lengthQuizz;
   };
+  service.getDayTime = function (){
+    return mosquitoTime;
+  }
+  service.getArrayNumberMosquitoes = function() {
+    return [mosquitoNumberAnswer1,mosquitoNumberAnswer2,mosquitoNumberAnswer3,mosquitoNumberAnswer4];
+  };
+  service.getArraySize = function() {
+    return [mosquitoSizeLower,mosquitoSizeNormal,mosquitoSizeUpper];
+  };
   service.getArrayTemperature = function() {
     return [mosquitoTemperature0, mosquitoTemperature10, mosquitoTemperature20, mosquitoTemperatureUpper];
   };
+  service.getArrayPlace = function (){
+    return [mosquitoInside, mosquitoOutside];
+  }
+  service.getArrayWater = function (){
+    return [mosquitoWaterYes, mosquitoWaterNo];
+  }
   service.getNumberPicture = function() {
     return mosquitoWithPicture;
   }

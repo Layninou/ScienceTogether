@@ -6,8 +6,8 @@
 angular.module('appMosquito')
 .controller('MosquitoMapperFireCtrl', MosquitoMapperFireCtrl);
 
-MosquitoMapperFireCtrl.$inject = ['$timeout', 'MosquitoMapperFireService', 'MosquitoMapperPieService'];
-function MosquitoMapperFireCtrl($timeout, MosquitoMapperFireService, MosquitoMapperPieService) {
+MosquitoMapperFireCtrl.$inject = ['$timeout', 'MosquitoMapperFireService', 'MosquitoMapperPieService','MosquitoMapperGraphService'];
+function MosquitoMapperFireCtrl($timeout, MosquitoMapperFireService, MosquitoMapperPieService,MosquitoMapperGraphService) {
     var $ctrl = this;
 
     //Quizz
@@ -32,8 +32,20 @@ function MosquitoMapperFireCtrl($timeout, MosquitoMapperFireService, MosquitoMap
       $ctrl.nbPictures = MosquitoMapperFireService.getNumberPicture();
 
       //Create Pie about Quizz
+      var numberData = MosquitoMapperFireService.getArrayNumberMosquitoes();
+      var sizeData = MosquitoMapperFireService.getArraySize();
       var temperatureData = MosquitoMapperFireService.getArrayTemperature();
       MosquitoMapperPieService.createTemperaturePie(temperatureData);
+      MosquitoMapperPieService.createNumberPie([10,10,10,10]);
+      MosquitoMapperPieService.createSizePie([10,10,10]);
+
+      //Create Graph about Quizz
+      var daytimeData = MosquitoMapperFireService.getDayTime();
+      var placeData = MosquitoMapperFireService.getArrayPlace();
+      var waterData = MosquitoMapperFireService.getArrayWater();
+      MosquitoMapperGraphService.createGraphDayTime(daytimeData);
+      MosquitoMapperGraphService.createGraphPlace(placeData);
+      MosquitoMapperGraphService.createGraphWater(waterData);
 
       //number of object in identifications
       $ctrl.idNumber = MosquitoMapperFireService.getNumberIdentification();

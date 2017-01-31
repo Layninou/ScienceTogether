@@ -1,7 +1,7 @@
 (function() {
 "use strict";
 /**
- * MosquitoMapper service firebase.
+ * MosquitoMapper service Pie.
  */
 angular.module('appMosquito')
 .service('MosquitoMapperPieService', MosquitoMapperPieService);
@@ -13,16 +13,22 @@ function MosquitoMapperPieService() {
   //Colors Attributs
   var colorIdentificationList = ["#99FF77","#1A75FF","#FF5050"];
   var colorTemperature = ["#1a1aff","#8080FF","#FF9999","#FF0000"];
+  var colorNumber = ["#FF8566","#FF3300","#FF3333","#B30000"];
+  var colorSize = ["#FF33FF","#FF1AFF","#990099"];
 
   //Canvas and context Attributs
   var canvasAntennae   = document.getElementById("mosquitomapper-antennae-canvas");
   var canvasMouthpiece = document.getElementById("mosquitomapper-mouthpiece-canvas");
   var canvasWings      = document.getElementById("mosquitomapper-wings-canvas");
   var canvasTemperature = document.getElementById("temperature-mosquitoes-canvas");
+  var canvasNumberMosquitoes = document.getElementById("number-mosquitoes-canvas");
+  var canvasSize = document.getElementById("size-mosquitoes-canvas");
   var contextAntennae   = canvasAntennae.getContext("2d");
   var contextMouthpiece = canvasMouthpiece.getContext("2d");
   var contextWings      = canvasWings.getContext("2d");
   var contextTemperature = canvasTemperature.getContext("2d");
+  var contextNumberMosquitoes = canvasNumberMosquitoes.getContext("2d");
+  var contextSize = canvasSize.getContext("2d");
 
   //Get Labels
   var antennaeLabels = [];
@@ -37,7 +43,9 @@ function MosquitoMapperPieService() {
   wingsLabels.push(document.getElementById("wings-label-type-a").innerHTML);
   wingsLabels.push(document.getElementById("wings-label-type-b").innerHTML);
   wingsLabels.push(document.getElementById("wings-label-type-c").innerHTML);
-  var temperatureLabels = ["< 0C","< 10C","< 20C","> 20C"]
+  var temperatureLabels = ["< 0C","< 10C","< 20C","> 20C"];
+  var numberMosquitoesLabels = ["1","2 to 5","5 to 30","more"];
+  var sizeLabels = [" less than 1 cm","1 to 2 cm","more than 2cm"];
 
   //This service create the pie an canvas
   function pie(ctx, w, h, datalist, datalabel, colorlist) {
@@ -98,6 +106,12 @@ function MosquitoMapperPieService() {
   }
   service.createTemperaturePie = function(dataList){
     pie(contextTemperature, canvasTemperature.width, canvasTemperature.height, dataList, temperatureLabels, colorTemperature);
+  }
+  service.createNumberPie = function(dataList){
+    pie(contextNumberMosquitoes, canvasNumberMosquitoes.width, canvasNumberMosquitoes.height, dataList, numberMosquitoesLabels, colorNumber);
+  }
+  service.createSizePie = function(dataList){
+    pie(contextSize, canvasSize.width, canvasSize.height, dataList, sizeLabels, colorSize);
   }
 
 }

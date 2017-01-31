@@ -42,8 +42,7 @@
 }
 
 #projects-quizz canvas{
-  background-color: #808080;
-  border-radius: 25px;
+
 }
 
 .map-mosquito{
@@ -62,7 +61,12 @@
   margin-top: 5px;
 }
 
+#daytime-mosquitoes-canvas {
+  /*background-color: #FFFFFF;*/
+}
+
 .number-mosquitoes{
+  margin-top: 20px;
   position: relative;
 }
 
@@ -107,6 +111,10 @@
   position: relative;
 }
 
+#temperature-mosquitoes-canvas{
+  background-color: #D2D823;
+}
+
 .text-temperature-mosquitoes{
   height: 300px;
   float: left;
@@ -127,7 +135,13 @@
 }
 
 .picture-mosquitoes{
-  margin-top: 30px;
+  margin-top: 10px;
+}
+
+#place-mosquitoes-canvas{
+}
+
+#water-mosquitoes-canvas{
 }
 
 /*IDENTIFICATION*/
