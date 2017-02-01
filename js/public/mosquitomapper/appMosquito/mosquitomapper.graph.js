@@ -24,12 +24,17 @@ function MosquitoMapperGraphService() {
   var labelWater = ["Yes", "No"];
 
   //Canvas and Context
-  var canvasDaytime = document.getElementById("daytime-mosquitoes-canvas");
-  var canvasPlace = document.getElementById("place-mosquitoes-canvas");
-  var canvasWater = document.getElementById("water-mosquitoes-canvas");
-  var contextDaytime = canvasDaytime.getContext("2d");
-  var contextPlace = canvasPlace.getContext("2d");
-  var contextWater = canvasWater.getContext("2d");
+  var canvasDaytime, canvasPlace, canvasWater;
+  var contextDaytime, contextPlace, contextWater;
+
+  service.init = function() {
+    canvasDaytime = document.getElementById("daytime-mosquitoes-canvas");
+    canvasPlace = document.getElementById("place-mosquitoes-canvas");
+    canvasWater = document.getElementById("water-mosquitoes-canvas");
+    contextDaytime = canvasDaytime.getContext("2d");
+    contextPlace = canvasPlace.getContext("2d");
+    contextWater = canvasWater.getContext("2d");
+  };
 
   var graph = function(ctx, w, h, datalist, colorlist, labellist) {
 

@@ -10,6 +10,8 @@ MosquitoMapperMapService.$inject = [];
 function MosquitoMapperMapService() {
   var service = this;
 
+  var map;
+
   var initLatLong = new google.maps.LatLng(0,0);
   var myOptions = {
     zoom      : 2,
@@ -18,11 +20,10 @@ function MosquitoMapperMapService() {
     maxzoom   : 20
   };
 
-  var map = new google.maps.Map(document.getElementById("map-mosquitoes"),myOptions);
-
-  $(window).resize(function() {
-    google.maps.event.trigger(map,"resize");
-  });
+  service.init = function() {
+    var test = document.getElementById("map-mosquitoes");
+    map = new google.maps.Map(test,myOptions);
+  };
 
   service.createMapMosquitoes = function(dataLat, dataLng) {
     for (var i = 0; i < dataLat.length; i++) {

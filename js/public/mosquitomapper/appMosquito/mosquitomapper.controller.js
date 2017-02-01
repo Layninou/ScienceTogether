@@ -26,6 +26,14 @@ function MosquitoMapperFireCtrl($timeout, MosquitoMapperFireService, MosquitoMap
     $ctrl.wingsType1 = 0;
     $ctrl.wingsType2 = 0;
 
+    //init DOM (because this code is not beautiful)
+    $timeout(function () {
+      MosquitoMapperPieService.init();
+      MosquitoMapperGraphService.init();
+      MosquitoMapperMapService.init();
+    }, 10);
+
+    //after database is load
     $timeout(function () {
       //number of object in quizzs
       $ctrl.quizzNumber = MosquitoMapperFireService.getNumberQuizz();

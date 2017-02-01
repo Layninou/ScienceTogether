@@ -16,36 +16,44 @@ function MosquitoMapperPieService() {
   var colorNumber = ["#FF8566","#FF3300","#FF3333","#B30000"];
   var colorSize = ["#FF33FF","#FF1AFF","#990099"];
 
-  //Canvas and context Attributs
-  var canvasAntennae   = document.getElementById("mosquitomapper-antennae-canvas");
-  var canvasMouthpiece = document.getElementById("mosquitomapper-mouthpiece-canvas");
-  var canvasWings      = document.getElementById("mosquitomapper-wings-canvas");
-  var canvasTemperature = document.getElementById("temperature-mosquitoes-canvas");
-  var canvasNumberMosquitoes = document.getElementById("number-mosquitoes-canvas");
-  var canvasSize = document.getElementById("size-mosquitoes-canvas");
-  var contextAntennae   = canvasAntennae.getContext("2d");
-  var contextMouthpiece = canvasMouthpiece.getContext("2d");
-  var contextWings      = canvasWings.getContext("2d");
-  var contextTemperature = canvasTemperature.getContext("2d");
-  var contextNumberMosquitoes = canvasNumberMosquitoes.getContext("2d");
-  var contextSize = canvasSize.getContext("2d");
+  //Canvas and Context Attributs
+  var canvasAntennae, canvasMouthpiece, canvasWings, canvasTemperature, canvasNumberMosquitoes, canvasSize;
+  var contextAntennae, contextMouthpiece, contextWings, contextTemperature, contextNumberMosquitoes, contextSize;
 
   //Get Labels
   var antennaeLabels = [];
-  antennaeLabels.push(document.getElementById("antennae-label-type-a").innerHTML);
-  antennaeLabels.push(document.getElementById("antennae-label-type-b").innerHTML);
-  antennaeLabels.push(document.getElementById("antennae-label-type-c").innerHTML);
   var mouthpieceLabels = [];
-  mouthpieceLabels.push(document.getElementById("mouthpiece-label-type-a").innerHTML);
-  mouthpieceLabels.push(document.getElementById("mouthpiece-label-type-b").innerHTML);
-  mouthpieceLabels.push(document.getElementById("mouthpiece-label-type-c").innerHTML);
   var wingsLabels = [];
-  wingsLabels.push(document.getElementById("wings-label-type-a").innerHTML);
-  wingsLabels.push(document.getElementById("wings-label-type-b").innerHTML);
-  wingsLabels.push(document.getElementById("wings-label-type-c").innerHTML);
+
   var temperatureLabels = ["< 0C","< 10C","< 20C","> 20C"];
   var numberMosquitoesLabels = ["1","2 to 5","5 to 30","more"];
   var sizeLabels = [" less than 1 cm","1 to 2 cm","more than 2cm"];
+
+  //Canvas and context initialisation
+  service.init = function() {
+    canvasAntennae   = document.getElementById("mosquitomapper-antennae-canvas");
+    canvasMouthpiece = document.getElementById("mosquitomapper-mouthpiece-canvas");
+    canvasWings      = document.getElementById("mosquitomapper-wings-canvas");
+    canvasTemperature = document.getElementById("temperature-mosquitoes-canvas");
+    canvasNumberMosquitoes = document.getElementById("number-mosquitoes-canvas");
+    canvasSize = document.getElementById("size-mosquitoes-canvas");
+    contextAntennae   = canvasAntennae.getContext("2d");
+    contextMouthpiece = canvasMouthpiece.getContext("2d");
+    contextWings      = canvasWings.getContext("2d");
+    contextTemperature = canvasTemperature.getContext("2d");
+    contextNumberMosquitoes = canvasNumberMosquitoes.getContext("2d");
+    contextSize = canvasSize.getContext("2d");
+
+    antennaeLabels.push(document.getElementById("antennae-label-type-a").innerHTML);
+    antennaeLabels.push(document.getElementById("antennae-label-type-b").innerHTML);
+    antennaeLabels.push(document.getElementById("antennae-label-type-c").innerHTML);
+    mouthpieceLabels.push(document.getElementById("mouthpiece-label-type-a").innerHTML);
+    mouthpieceLabels.push(document.getElementById("mouthpiece-label-type-b").innerHTML);
+    mouthpieceLabels.push(document.getElementById("mouthpiece-label-type-c").innerHTML);
+    wingsLabels.push(document.getElementById("wings-label-type-a").innerHTML);
+    wingsLabels.push(document.getElementById("wings-label-type-b").innerHTML);
+    wingsLabels.push(document.getElementById("wings-label-type-c").innerHTML);
+  };
 
   //This service create the pie an canvas
   function pie(ctx, w, h, datalist, datalabel, colorlist) {
