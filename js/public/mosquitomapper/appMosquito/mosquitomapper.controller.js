@@ -6,8 +6,8 @@
 angular.module('appMosquito')
 .controller('MosquitoMapperFireCtrl', MosquitoMapperFireCtrl);
 
-MosquitoMapperFireCtrl.$inject = ['$timeout', 'MosquitoMapperFireService', 'MosquitoMapperPieService','MosquitoMapperGraphService'];
-function MosquitoMapperFireCtrl($timeout, MosquitoMapperFireService, MosquitoMapperPieService,MosquitoMapperGraphService) {
+MosquitoMapperFireCtrl.$inject = ['$timeout', 'MosquitoMapperFireService', 'MosquitoMapperPieService','MosquitoMapperGraphService', 'MosquitoMapperMapService'];
+function MosquitoMapperFireCtrl($timeout, MosquitoMapperFireService, MosquitoMapperPieService,MosquitoMapperGraphService, MosquitoMapperMapService) {
     var $ctrl = this;
 
     //Quizz
@@ -46,6 +46,11 @@ function MosquitoMapperFireCtrl($timeout, MosquitoMapperFireService, MosquitoMap
       MosquitoMapperGraphService.createGraphDayTime(daytimeData);
       MosquitoMapperGraphService.createGraphPlace(placeData);
       MosquitoMapperGraphService.createGraphWater(waterData);
+
+      //Create Map
+      var latData = MosquitoMapperFireService.getArrayLatitude();
+      var lngData = MosquitoMapperFireService.getArrayLongitude();
+      MosquitoMapperMapService.createMapMosquitoes(latData, lngData);
 
       //number of object in identifications
       $ctrl.idNumber = MosquitoMapperFireService.getNumberIdentification();

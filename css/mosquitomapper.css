@@ -45,8 +45,15 @@
 
 }
 
-.map-mosquito{
+.map-mosquitoes-mapper{
   margin-top: 20px;
+  margin-left: 70px;
+  text-align: center;
+}
+
+#map-mosquitoes{
+  width: 1200px;
+  height: 500px;
 }
 
 .daytime-mosquitoes{

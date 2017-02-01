@@ -211,6 +211,16 @@ function MosquitoMapperFireService($q, $firebaseObject, $firebaseArray) {
   service.getDayTime = function (){
     return mosquitoTime;
   }
+
+    //Latitude and Longitude
+  service.getArrayLatitude = function() {
+    return allLatitude;
+  };
+  service.getArrayLongitude = function() {
+    return allLongitude;
+  };
+
+    //Quizz data
   service.getArrayNumberMosquitoes = function() {
     return [mosquitoNumberAnswer1,mosquitoNumberAnswer2,mosquitoNumberAnswer3,mosquitoNumberAnswer4];
   };
