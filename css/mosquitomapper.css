@@ -4,6 +4,7 @@
   list-style: none;
   width: 100%;
   padding: 0;
+  margin: 0;
 }
 
 #mosquito-elements{
@@ -25,35 +26,12 @@
 }
 
 /*QUIZZ*/
-
 #projects-quizz{
   background-color: #D2D823;
-  height: 2470px;
-}
-
-#projects-quizz h2{
-  text-align: center;
-  padding: 5px;
-  margin-left: 400px;
-  margin-right: 400px;
-  border-width: 2px;
-  border-color: black;
-  border-style: solid;
-}
-
-#projects-quizz canvas{
-
 }
 
 .map-mosquitoes-mapper{
-  margin-top: 20px;
-  margin-left: 70px;
   text-align: center;
-}
-
-#map-mosquitoes{
-  width: 1200px;
-  height: 500px;
 }
 
 .daytime-mosquitoes{
@@ -66,10 +44,6 @@
 
 .daytime-mosquitoes canvas{
   margin-top: 5px;
-}
-
-#daytime-mosquitoes-canvas {
-  /*background-color: #FFFFFF;*/
 }
 
 .number-mosquitoes{
@@ -152,21 +126,10 @@
 }
 
 /*IDENTIFICATION*/
-
 #projects-identification{
-  height: 580px;
   text-align: center;
   background-color: #D8BF23;
 
-}
-
-#projects-identification h2{
-  padding: 5px;
-  margin-left: 400px;
-  margin-right: 400px;
-  border-width: 2px;
-  border-color: black;
-  border-style: solid;
 }
 
 .pie-identification canvas{
@@ -196,4 +159,186 @@
   border-color: #D8BF23;
   border-radius: 25px;
   background-color: #FF69B4;
+}
+
+
+/********** Extra Large devices only **********/
+@media (min-width: 1800px) {
+
+/*QUIZZ*/
+#projects-quizz{
+  height: 2470px;
+}
+
+#projects-quizz h2{
+  text-align: center;
+  padding: 5px;
+  margin-left: 400px;
+  margin-right: 400px;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+}
+
+#map-mosquitoes{
+  margin-left: 350px;
+  width: 1800px;
+  height: 800px;
+}
+
+/*IDENTIFICATION*/
+#projects-identification{
+  height: 580px;
+}
+
+#projects-identification h2{
+  padding: 5px;
+  margin-left: 400px;
+  margin-right: 400px;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+}
+
+}
+
+/********** Large devices only **********/
+@media (min-width: 1200px) and (max-width: 1440px){
+
+/*QUIZZ*/
+#projects-quizz{
+  height: 2470px;
+}
+
+#projects-quizz h2{
+  text-align: center;
+  padding: 5px;
+  margin-left: 400px;
+  margin-right: 400px;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+}
+
+#map-mosquitoes{
+  margin-left: 25px;
+  width: 1300px;
+  height: 500px;
+}
+
+/*IDENTIFICATION*/
+#projects-identification{
+  height: 580px;
+}
+
+#projects-identification h2{
+  padding: 5px;
+  margin-left: 400px;
+  margin-right: 400px;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+}
+
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+
+/*QUIZZ*/
+#projects-quizz{
+  height: 2370px;
+}
+
+#projects-quizz h2{
+  text-align: center;
+  font-weight: bold;
+  padding: 5px;
+}
+
+#map-mosquitoes{
+  margin-left: 5px;
+  width: 950px;
+  height: 400px;
+}
+
+#daytime-mosquitoes-canvas{
+  width: 950px;
+  height: 400px;
+}
+
+/*IDENTIFICATION*/
+#projects-identification{
+  height: 500px;
+}
+
+#projects-identification h2{
+  font-weight: bold;
+  padding: 5px;
+}
+
+}
+  /********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+
+  /*QUIZZ*/
+  #projects-quizz{
+    height: 3570px;
+  }
+
+  #projects-quizz h2{
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+  }
+
+  #map-mosquitoes{
+    margin-left: 85px;
+    width: 750px;
+    height: 400px;
+  }
+
+  #daytime-mosquitoes-canvas{
+    width: 850px;
+    height: 400px;
+  }
+
+  /*IDENTIFICATION*/
+  #projects-identification{
+    height: 1350px;
+  }
+
+  #projects-identification h2{
+    font-weight: bold;
+    padding: 5px;
+  }
+
+  .pie-identification canvas{
+    background-color: #D8BF23;
+  }
+
+  #antennae-identification-area{
+    background-color: #D8BF23;
+  }
+
+  #mouthpiece-identification-area{
+    background-color: #D8BF23;
+  }
+
+  #wings-identification-area{
+    background-color: #D8BF23;
+  }
+
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+
+
+}
+
+/********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
+@media (max-width: 479px) {
+
+
 }
