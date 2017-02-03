@@ -71,8 +71,6 @@ pour de l'écran large
 
 /*PRESENTATION*/
 .home-presentation-box{
-  border-style: solid;
-  border-width: 1px;
   background-color: #0066CC;
   height: 200px;
 }
@@ -131,47 +129,29 @@ pour de l'écran large
 
 /*COMPANY*/
 .home-company-title{
-  /*border-style: solid;
-  border-width: 1px;
-  border-color: blue;*/
   background-color: #54FF59;
 }
 
 .home-company-content{
-  /*border-style: solid;
-  border-width: 1px;
-  border-color: blue;*/
   background-color: #33FF99;
 }
 
 /*IDEOLOGY*/
 .home-ideology-title{
-  /*border-style: solid;
-  border-width: 1px;
-  border-color: green;*/
   background-color: #004EE7;
   float: right;
 }
 
 .home-ideology-content{
-  /*border-style: solid;
-  border-width: 1px;
-  border-color: green;*/
   background-color: #0066CC;
 }
 
 /*PROJECTS*/
 .home-projects-title{
-  /*border-style: solid;
-  border-width: 1px;
-  border-color: yellow;*/
   background-color: #54FF59;
 }
 
 .home-projects-content{
-  /*border-style: solid;
-  border-width: 1px;
-  border-color: yellow;*/
   background-color: #33FF99;
 }
 
@@ -181,23 +161,510 @@ pour de l'écran large
   background-color: #0066CC;
 }
 
+/********** Extra extra Large devices only **********/
+@media (min-width: 1800px) {
 
+  /*About every section*/
+  .list-elements{
+    width: 100%;
+    height: 450px;
+    font-size: 1.5em;
+  }
+
+  /*Presentation*/
+  .home-presentation-box{
+    background-color: #0066CC;
+    height: 500px;
+  }
+
+  h3{
+    font-size: 2em;
+  }
+
+  .home-presentation-left div{
+    border-style: solid;
+    border-width: 1px;
+  }
+
+  .home-presentation-picture{
+    height: 350px;
+    width: 350px;
+    margin: 50px;
+    background-color: #808080;
+    opacity: 0.5;
+  }
+
+  #picture-camille{
+    margin-left: 125px;
+    float: left;
+  }
+
+  #picture-theophile{
+    margin-right: 125px;
+    float:right;
+  }
+
+  .home-presentation-text{
+    height: 150px;
+  }
+
+  .home-presentation-text h2{
+    margin-top: 80px;
+    font-size: 1.5em;
+  }
+
+  .home-presentation-text p{
+    width: 300px;
+    margin-top: 20px;
+  }
+
+  #presentation-camille{
+    margin-right: 125px;
+  }
+
+  #presentation-theophile{
+    float: left;
+    margin-left: 125px
+  }
+
+  #presentation-camille h2{
+
+  }
+
+  #presentation-theophile h2{
+    margin-left: 45px;
+  }
+
+  #presentation-camille p{
+    text-align: left;
+    margin-left: 220px;
+  }
+
+  #presentation-theophile p{
+    text-align: right;
+    width: 500px;
+    margin-left: 400px;
+    padding-right: 150px;
+  }
+
+  /*BLOG*/
+  #home-blog h2{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-size: 3em;
+  }
+
+}
+
+/********** Extra Large devices only **********/
+@media (min-width: 1440px) and (max-width: 1799px){
+
+  /*About every section*/
+  .list-elements{
+    width: 100%;
+    height: 250px;
+    font-size: 1.2em;
+  }
+
+  /*Presentation*/
+  .home-presentation-box{
+    background-color: #0066CC;
+    height: 300px;
+  }
+
+  h3{
+    font-size: 2em;
+  }
+
+  .home-presentation-picture{
+    height: 200px;
+    width: 200px;
+    margin: 30px;
+    background-color: #808080;
+    opacity: 0.5;
+  }
+
+  #picture-camille{
+    margin-left: 25px;
+    float: left;
+  }
+
+  #picture-theophile{
+    margin-right: 25px;
+    float:right;
+  }
+
+  .home-presentation-text{
+    height: 150px;
+  }
+
+  .home-presentation-text h2{
+    margin-top: 30px;
+    font-size: 1.5em;
+  }
+
+  .home-presentation-text p{
+    width: 300px;
+    margin-top: 10px;
+  }
+
+  #presentation-camille{
+    margin-right: 15px;
+  }
+
+  #presentation-theophile{
+    float: left;
+    margin-left: 125px
+  }
+
+  #presentation-camille h2{
+    padding-right: 170px;
+  }
+
+  #presentation-theophile h2{
+    margin-left: 45px;
+  }
+
+  #picture-camille{
+    margin-left: 0;
+    float: left;
+  }
+
+  #picture-theophile{
+    margin-right: 0;
+    float:right;
+    transform: translate(-20%,-75%);
+  }
+
+  #presentation-camille h2{
+    transform: translate(17%,-800%);
+  }
+
+  #presentation-theophile h2{
+    transform: translate(-28%,0%);
+  }
+
+  #presentation-camille p{
+    text-align: left;
+    width: 300px;
+    transform: translate(-68%,-160%);
+  }
+
+  #presentation-theophile p{
+    text-align: right;
+    width: 500px;
+    transform: translate(-80%,-0%);
+  }
+
+  /*BLOG*/
+  #home-blog h2{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 3em;
+  }
+
+}
 /********** Large devices only **********/
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1439px){
+
+  /*About every section*/
+  .list-elements{
+    width: 100%;
+    height: 150px;
+  }
+
+  /*Presentation*/
+  .home-presentation-box{
+    background-color: #0066CC;
+    height: 200px;
+  }
+
+  .home-presentation-left div{
+    border-style: solid;
+    border-width: 1px;
+  }
+
+  .home-presentation-picture{
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+    background-color: #808080;
+    opacity: 0.5;
+  }
+
+  #picture-camille{
+    margin-left: 125px;
+    float: left;
+  }
+
+  #picture-theophile{
+    margin-right: 125px;
+    float:right;
+  }
+
+  .home-presentation-text{
+    height: 150px;
+  }
+
+  .home-presentation-text p{
+    width: 300px;
+    margin-top: 20px;
+  }
+
+  #presentation-camille{
+    margin-right: 125px;
+  }
+
+  #presentation-theophile{
+    float: left;
+    margin-left: 125px
+  }
+
+  #picture-camille{
+    margin-left: 0;
+    float: left;
+  }
+
+  #picture-theophile{
+    margin-right: 0;
+    float:right;
+    transform: translate(-20%,-100%);
+  }
+
+  #presentation-camille h2{
+    transform: translate(0,-500%);
+  }
+
+  #presentation-theophile h2{
+    transform: translate(-28%,0%);
+  }
+
+  #presentation-camille p{
+    text-align: left;
+    width: 300px;
+    transform: translate(-78%,-180%);
+  }
+
+  #presentation-theophile p{
+    text-align: right;
+    width: 500px;
+    transform: translate(-80%,-30%);
+  }
 
 }
 
 /********** Medium devices only **********/
 @media (min-width: 992px) and (max-width: 1199px) {
 
+  /*About every section*/
+  .list-elements{
+    width: 100%;
+    height: 150px;
+  }
+
+  /*Presentation*/
+  .home-presentation-box{
+    background-color: #0066CC;
+    height: 250px;
+  }
+
+  .home-presentation-picture{
+    height: 150px;
+    width: 150px;
+    margin: 30px;
+    background-color: #808080;
+    opacity: 0.5;
+  }
+
+  #picture-camille{
+    margin-left: 0px;
+    float: left;
+  }
+
+  #picture-theophile{
+    margin: 0px;
+    margin-top: 30px;
+    float:right;
+    transform: translate(-5%,-100%);
+  }
+
+  .home-presentation-text{
+    height: 150px;
+  }
+
+  .home-presentation-text h2{
+    margin-top: 30px;
+    font-size: 1.5em;
+  }
+
+  .home-presentation-text p{
+    width: 300px;
+    margin-top: 10px;
+  }
+
+  #presentation-camille{
+    margin-left: 125px;
+  }
+
+  #presentation-theophile{
+    float: left;
+    margin-left: 0px
+  }
+
+  #presentation-camille h2{
+    text-align: left;
+    width: 300px;
+    height: 25px;
+    transform: translate(15%,-830%);
+  }
+
+  #presentation-theophile h2{
+    text-align: left;
+    width: 300px;
+    height: 25px;
+    transform: translateX(10%);
+  }
+
+  #presentation-camille p{
+    text-align: left;
+    margin-left: 90px;
+    transform: translate(-90%,-190%);
+  }
+
+  #presentation-theophile p{
+    text-align: right;
+    width: 300px;
+    margin-left: 0px;
+    padding: 0px;
+    transform: translate(-90%,0%);
+  }
+
+  /*BLOG*/
+  #home-blog h2{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 3em;
+  }
+
 }
   /********** Small devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
+
+  /*Presentation*/
+  #picture-camille{
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+  }
+
+  #picture-theophile{
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+  }
+
+  #presentation-theophile{
+    width: 300px;
+  }
+
+  #presentation-camille h2{
+    padding: 0;
+    margin: 0;
+    width: 300px;
+    height: 25px;
+    float: right;
+    transform: translateY(250%);
+  }
+
+  #presentation-theophile h2{
+    padding: 0;
+    margin: 0;
+    width: 300px;
+    height: 25px;
+    float: left;
+    transform: translate(-30%, 350%);
+  }
+
+  #presentation-camille p{
+    padding: 0;
+    margin: 0;
+    width: 400px;
+    height: 25px;
+    float: left;
+    font-size: 1.1em;
+    transform: translate(-100%, -150%);
+  }
+
+  #presentation-theophile p{
+    padding: 0;
+    margin: 0;
+    width: 400px;
+    height: 25px;
+    float: right;
+    font-size: 1.1em;
+    transform: translate(60%, -150%);
+  }
+
 
 }
 
 /********** Extra small devices only **********/
 @media (max-width: 767px) {
+
+  /*Presentation*/
+  #picture-camille{
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+  }
+
+  #picture-theophile{
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+  }
+
+  #presentation-theophile{
+    width: 300px;
+  }
+
+  #presentation-camille h2{
+    padding: 0;
+    margin: 0;
+    width: 300px;
+    height: 25px;
+    float: right;
+    transform: translateY(250%);
+  }
+
+  #presentation-theophile h2{
+    padding: 0;
+    margin: 0;
+    width: 300px;
+    height: 25px;
+    float: left;
+    transform: translate(-30%, 350%);
+  }
+
+  #presentation-camille p{
+    padding: 0;
+    margin: 0;
+    width: 400px;
+    height: 25px;
+    float: left;
+    font-size: 1.1em;
+    transform: translate(-100%, -150%);
+  }
+
+  #presentation-theophile p{
+    padding: 0;
+    margin: 0;
+    width: 400px;
+    height: 25px;
+    float: right;
+    font-size: 1.1em;
+    transform: translate(60%, -150%);
+  }
 
 }
 

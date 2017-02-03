@@ -202,8 +202,48 @@
 
 }
 
+/********** Extra Large devices only **********/
+@media (min-width: 1440px) and (max-width: 1799px){
+
+  /*QUIZZ*/
+  #projects-quizz{
+    height: 2470px;
+  }
+
+  #projects-quizz h2{
+    text-align: center;
+    padding: 5px;
+    margin-left: 400px;
+    margin-right: 400px;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+  }
+
+  #map-mosquitoes{
+    margin-left: 50px;
+    width: 1300px;
+    height: 500px;
+  }
+
+  /*IDENTIFICATION*/
+  #projects-identification{
+    height: 580px;
+  }
+
+  #projects-identification h2{
+    padding: 5px;
+    margin-left: 400px;
+    margin-right: 400px;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+  }
+
+}
+
 /********** Large devices only **********/
-@media (min-width: 1200px) and (max-width: 1440px){
+@media (min-width: 1200px) and (max-width: 1439px){
 
 /*QUIZZ*/
 #projects-quizz{
