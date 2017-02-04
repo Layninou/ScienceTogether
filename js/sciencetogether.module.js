@@ -4,7 +4,7 @@
 /**
  * Main module with public module dependencies
  */
-angular.module('ScienceTogether', ['public', 'appMosquito'])
+angular.module('ScienceTogether', ['public', 'appMosquito', 'appBlog'])
 .config(config);
 
 config.$inject = ['$urlRouterProvider'];

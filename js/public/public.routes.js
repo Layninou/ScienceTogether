@@ -22,7 +22,12 @@ function routeConfig ($stateProvider) {
   //MosquitoMapper view
     .state('public.mosquitomapper',{
       url: '/mosquitomapper',
-      templateUrl: 'js/public/mosquitomapper/snippet/mosquito.html',
+      templateUrl: 'js/public/mosquitomapper/snippet/mosquito.html'
+    })
+  //Blog view
+    .state('public.blog',{
+      url: '/blog',
+      templateUrl: 'js/public/blog/snippet/blog.html'
     });
 
 }
