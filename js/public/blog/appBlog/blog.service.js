@@ -9,7 +9,7 @@
     storageBucket: "blogsciencetogether-f6250.appspot.com",
     messagingSenderId: "369552791032"
   };
-  var fireBlog = firebase.initializeApp(configBlog, "Secondary");
+  var fireBlog = firebase.initializeApp(configBlog, "Blog");
 
   angular.module('appBlog')
   .service('BlogFireService', BlogFireService);

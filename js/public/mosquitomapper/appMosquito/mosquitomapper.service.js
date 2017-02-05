@@ -3,6 +3,17 @@
 /**
  * MosquitoMapper service firebase.
  */
+
+ //initialize firebase
+ var configMMapper = {
+   apiKey: "AIzaSyBsf-f7ToSC7yQJ6Bpl_GjBtkAGGrEYHnw",
+   authDomain: "mosquitofinder.firebaseapp.com",
+   databaseURL: "https://mosquitofinder.firebaseio.com",
+   storageBucket: "mosquitofinder.appspot.com",
+   messagingSenderId: "461623120558"
+ };
+ var mosquitofire = firebase.initializeApp(configMMapper, "MosquitoMapper");
+
 angular.module('appMosquito')
 .service('MosquitoMapperFireService', MosquitoMapperFireService);
 
@@ -11,7 +22,7 @@ function MosquitoMapperFireService($q, $firebaseObject, $firebaseArray) {
   var service = this;
 
   //Data attribut
-  const rootRef = firebase.database().ref();
+  const rootRef = mosquitofire.database().ref();
   const identificationsRef = rootRef.child('Identifications');
   const picturesRef = rootRef.child('Pictures');
   const quizzsRef = rootRef.child('Quizzs');
