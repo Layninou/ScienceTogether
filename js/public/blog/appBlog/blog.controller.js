@@ -6,7 +6,7 @@
 
   BlogFireCtrl.$inject = ['BlogFireService'];
   function BlogFireCtrl(BlogFireService) {
-    this.object = BlogFireService.getObjectTest();
+    
   }
 
 }());
