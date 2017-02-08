@@ -1,4 +1,13 @@
 <div id="container-blog" ng-controller="BlogFireCtrl as ctrl">
-  <h1>Past</h1>
+
+<div id="articles-blog" class="col-md-10">
+  <article-blog ng-repeat="list in ctrl.blogData" title="list.title" author="list.author" blog="list.paragraphs"></article-blog>
+</div>
+
+<div id="list-blog" class="col-md-2">
+  <p ng-repeat="l in ctrl.listData">
+    {{ l }}
+  </p>
+</div>
 
 </div>

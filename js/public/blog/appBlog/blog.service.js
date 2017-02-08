@@ -20,9 +20,77 @@
 
     //Data attribut
     const rootRef = fireBlog.database().ref();
+    const testchild = rootRef.child("january 2017");
 
-    service.getObjectTest = function() {
-      return $firebaseObject(rootRef);;
+    //data we need
+    var date = [];
+    var authorList = [];
+    var titleList = [];
+    var articlesList = [];
+    var blogDataList =[];
+
+    //set Articles
+    rootRef.on('value',blogData,blogErr);
+
+    function blogData(data) {
+
+      var articles = data.val();
+      var keys = Object.keys(articles);
+      for (var i = 0; i < keys.length; i++) {
+        var k = keys[i];
+
+        date.push(k);
+
+        authorList.push(articles[k].author);
+        titleList.push(articles[k].title);
+
+        var paragraphsKeys = Object.keys(articles[k].paragraph);
+        var paragraphs = articles[k].paragraph;
+        var oneArticle = [];
+
+        for (var i = 0; i < paragraphsKeys.length; i++) {
+          var eachElement = paragraphsKeys[i];
+          oneArticle.push(paragraphs[eachElement]);
+        }
+
+        articlesList.push(oneArticle);
+      }
+
+      for (var i = 0; i < date.length; i++) {
+        blogDataList.push({
+          title: titleList[i],
+          author: authorList[i],
+          paragraphs: articlesList[i]
+        });
+      }
+
+
+
+    }
+
+    function blogErr(err) {
+      console.log("Error!");
+      console.log(err);
+    }
+
+
+
+
+    //service tools
+    service.getTitles = function() {
+      return titleList;
+    }
+    service.getAuthors = function() {
+      return authorList;
+    }
+    service.getDatesArticles = function() {
+      return date;
+    }
+    service.getAllArticles = function() {
+      return articlesList;
+    }
+    service.getData = function() {
+      return blogDataList;
     }
 
   }
