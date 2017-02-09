@@ -55,7 +55,133 @@
 }
 
 /********** Extra Large devices only **********/
-@media (min-width: 1800px) {}
+@media (min-width: 1800px) {
+
+  /* Presentation */
+    #picture-camille{
+      height: 50vh;
+    }
+
+    #presentation-camille{
+      height: 50vh;
+      text-align: center;
+    }
+
+    #presentation-camille h2{
+      font-size: 4.0em;
+    }
+
+    #presentation-camille p{
+      font-size: 2.0em;
+    }
+
+    #picture-theophile{
+      height: 50vh;
+    }
+
+    #presentation-theophile{
+      height: 50vh;
+      text-align: center;
+    }
+
+    #presentation-theophile h2{
+      font-size: 4.0em;
+    }
+
+    #presentation-theophile p{
+      font-size: 2.0em;
+    }
+
+  /* Company */
+    .home-company-title{
+      margin-top: 20px;
+    }
+
+    .home-company-title h3{
+      font-size: 4.9em;
+      font-weight: bold;
+      transform: translate(20vw,30vh);
+    }
+
+    .home-company-content{}
+
+    .home-company-content p{
+      font-size: 2.5em;
+      width: 30vw;
+      transform: translate(20vw,20vh);
+    }
+
+  /* Ideology */
+    .home-ideology-title{
+      float: right;
+    }
+
+    .home-ideology-title h3{
+      font-size: 4.9em;
+      font-weight: bold;
+      transform: translate(-20vw,40vh);
+    }
+
+    .home-ideology-content{
+      float: left;
+    }
+
+    .home-ideology-content p{
+      font-size: 2.5em;
+      width: 30vw;
+      transform: translate(20vw,20vh);
+    }
+
+  /* Project */
+    .home-projects-title{
+
+    }
+
+    .home-projects-title h3{
+      font-size: 4.9em;
+      font-weight: bold;
+      transform: translate(20vw,30vh);
+    }
+
+    .our-project{
+      position: relative;
+      margin: 15px;
+      background: grey;
+      width: 20vw;
+      height: 50vh;
+      transform: translate(20vw,10vh);
+    }
+
+    .our-project span{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      color: white;
+      background-color: black;
+      opacity: 0.8;
+    }
+
+    .our-project:hover{
+      background-color: green;
+      opacity: 0.8;
+    }
+
+  /* Blog */
+    #home-blog{}
+
+    #home-blog h2{
+      font-size: 4.9em;
+      font-weight: bold;
+      transform: translate(0,7vh);
+    }
+
+    #home-blog:hover{
+      color: white;
+    }
+
+}
 
 /********** Extra Large devices only **********/
 @media (min-width: 1440px) and (max-width: 1799px){
@@ -311,7 +437,7 @@
     }
 
     .home-company-title h3{
-      font-size: 2.9em;
+      font-size: 2.2em;
       font-weight: bold;
       transform: translate(20vw,30vh);
     }
@@ -319,7 +445,7 @@
     .home-company-content{}
 
     .home-company-content p{
-      font-size: 1.5em;
+      font-size: 1.3em;
       width: 30vw;
       transform: translate(20vw,20vh);
     }
@@ -330,7 +456,7 @@
     }
 
     .home-ideology-title h3{
-      font-size: 2.9em;
+      font-size: 2.2em;
       font-weight: bold;
       transform: translate(-20vw,40vh);
     }
@@ -340,7 +466,7 @@
     }
 
     .home-ideology-content p{
-      font-size: 1.5em;
+      font-size: 1.3em;
       width: 30vw;
       transform: translate(20vw,20vh);
     }
@@ -401,21 +527,37 @@
 
   /* Presentation */
     #picture-camille{
-      height: 50vh;
+      height: 25vh;
     }
 
     #presentation-camille{
-      height: 50vh;
+      height: 25vh;
       text-align: center;
+    }
+
+    #presentation-camille h2{
+      font-size: 2.0em;
+    }
+
+    #presentation-camille p{
+      font-size: 1.0em;
     }
 
     #picture-theophile{
-      height: 50vh;
+      height: 25vh;
     }
 
     #presentation-theophile{
-      height: 50vh;
+      height: 25vh;
       text-align: center;
+    }
+
+    #presentation-theophile h2{
+      font-size: 2.0em;
+    }
+
+    #presentation-theophile p{
+      font-size: 1em;
     }
 
   /* Company */
@@ -426,15 +568,15 @@
     .home-company-title h3{
       font-size: 2.9em;
       font-weight: bold;
-      transform: translate(20vw,30vh);
+      transform: translate(20vw,40vh);
     }
 
     .home-company-content{}
 
     .home-company-content p{
-      font-size: 1.5em;
+      font-size: 1.3em;
       width: 30vw;
-      transform: translate(20vw,20vh);
+      transform: translate(50vw,10vh);
     }
 
   /* Ideology */
@@ -445,7 +587,7 @@
     .home-ideology-title h3{
       font-size: 2.9em;
       font-weight: bold;
-      transform: translate(-20vw,40vh);
+      transform: translate(60vw,40vh);
     }
 
     .home-ideology-content{
@@ -453,7 +595,7 @@
     }
 
     .home-ideology-content p{
-      font-size: 1.5em;
+      font-size: 1.3em;
       width: 30vw;
       transform: translate(20vw,20vh);
     }
@@ -466,16 +608,17 @@
     .home-projects-title h3{
       font-size: 2.9em;
       font-weight: bold;
-      transform: translate(20vw,30vh);
+      text-align: center;
+      transform: translate(0vw,15vh);
     }
 
     .our-project{
       position: relative;
-      margin: 15px;
+      margin: 20px;
       background: grey;
-      width: 20vw;
-      height: 50vh;
-      transform: translate(20vw,10vh);
+      width: 30vw;
+      height: 25vh;
+      transform: translate(15vw,20vh);
     }
 
     .our-project span{
@@ -500,7 +643,7 @@
     #home-blog h2{
       font-size: 2.9em;
       font-weight: bold;
-      transform: translate(0,2vh);
+      transform: translate(0,7vh);
     }
 
     #home-blog:hover{
@@ -510,25 +653,41 @@
 }
 
 /********** Extra small devices only **********/
-@media (max-width: 767px) {
+@media (min-width: 479px) and (max-width: 767px) {
 
   /* Presentation */
     #picture-camille{
-      height: 50vh;
+      height: 25vh;
     }
 
     #presentation-camille{
-      height: 50vh;
+      height: 25vh;
       text-align: center;
+    }
+
+    #presentation-camille h2{
+      font-size: 3.0em;
+    }
+
+    #presentation-camille p{
+      font-size: 1.5em;
     }
 
     #picture-theophile{
-      height: 50vh;
+      height: 25vh;
     }
 
     #presentation-theophile{
-      height: 50vh;
+      height: 25vh;
       text-align: center;
+    }
+
+    #presentation-theophile h2{
+      font-size: 3.0em;
+    }
+
+    #presentation-theophile p{
+      font-size: 1.5em;
     }
 
   /* Company */
@@ -539,7 +698,7 @@
     .home-company-title h3{
       font-size: 2.9em;
       font-weight: bold;
-      transform: translate(20vw,30vh);
+      transform: translate(20vw,40vh);
     }
 
     .home-company-content{}
@@ -547,7 +706,7 @@
     .home-company-content p{
       font-size: 1.5em;
       width: 30vw;
-      transform: translate(20vw,20vh);
+      transform: translate(50vw,20vh);
     }
 
   /* Ideology */
@@ -558,7 +717,7 @@
     .home-ideology-title h3{
       font-size: 2.9em;
       font-weight: bold;
-      transform: translate(-20vw,40vh);
+      transform: translate(60vw,40vh);
     }
 
     .home-ideology-content{
@@ -579,16 +738,17 @@
     .home-projects-title h3{
       font-size: 2.9em;
       font-weight: bold;
-      transform: translate(20vw,30vh);
+      text-align: center;
+      transform: translate(0vw,15vh);
     }
 
     .our-project{
       position: relative;
-      margin: 15px;
+      margin: 20px;
       background: grey;
-      width: 20vw;
-      height: 50vh;
-      transform: translate(20vw,10vh);
+      width: 30vw;
+      height: 25vh;
+      transform: translate(15vw,20vh);
     }
 
     .our-project span{
@@ -613,7 +773,7 @@
     #home-blog h2{
       font-size: 2.9em;
       font-weight: bold;
-      transform: translate(0,2vh);
+      transform: translate(0,7vh);
     }
 
     #home-blog:hover{
@@ -623,8 +783,4 @@
 }
 
 /********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
-@media (max-width: 479px) {
-
-
-
-}
+@media (max-width: 479px) {}
