@@ -29,6 +29,13 @@ body .container-fluid{
   margin-top: 60px;
 }
 
+
+/** Scrollbar **/
+body .container-fluid::-webkit-scrollbar {
+  display: none;
+}
+
+
 /** Header **/
 #header-nav {
   background-color: #13DC4B;
@@ -37,20 +44,22 @@ body .container-fluid{
 }
 
 .navbar{
-  text-align: center;
+  /*text-align: center;*/
   margin: 0;
 }
 
 .navbar-header {
-  padding-top: 25px;
+  padding-top: 0px;
   float:none;
 }
 
 .navbar-header h1 {
   color: #000;
-  text-align: center;
+  margin-left: 5px;
+  /*text-align: center;*/
   text-transform: uppercase;
   font-weight: bold;
+  font-style: italic;
   text-shadow: 1px 1px 1px #909090;
 }
 

@@ -1,5 +1,9 @@
+<link rel="stylesheet" href="css/navbar.mosquitomapper.css">
+
 <div id="mosquito-mapper-content" class="container" ng-controller="MosquitoMapperFireCtrl as ctrl">
+
   <ul id="mosquito-elements" class="elements projects-elements">
+
     <li id="projects-presentation" class="projects-list-elements list-elements">
       <div class="projects-presentation-title projects-presentation-title col-xs-12 col-md-3">
         mosquito mapper img
@@ -8,17 +12,21 @@
         <h2>Mosquito Mapper</h2>
       </div>
     </li>
+
     <li id="projects-quizz" class="projects-list-elements list-elements col-xs-12">
       <span class="col-xs-12"><h2>Number of elements declared <span>{{ ctrl.quizzNumber }}</span></h2></span>
+
       <div class="map-mosquitoes-mapper text-center col-md-12">
         <div id="map-mosquitoes">
           Wait until the map is loaded
         </div>
       </div>
+
       <div class="daytime-mosquitoes text-center col-md-12">
         <h3>When did you find our mosquitoes:</h3> <br>
         <canvas id="daytime-mosquitoes-canvas" width="1350" height="400"></canvas>
       </div>
+
       <!-- Error here about data -->
       <div class="number-mosquitoes text-center col-md-12">
         <div class="pie-number-mosquitoes col-md-4 col-xs-12">
@@ -36,6 +44,7 @@
           </div>
         </div>
       </div>
+
       <div class="size-mosquitoes text-center col-md-12">
         <div class="pie-size-mosquitoes col-md-4 col-xs-12">
           <canvas id="size-mosquitoes-canvas" width="300" height="300"></canvas>
@@ -53,6 +62,7 @@
         </div>
       </div>
       <!-- Error stop here -->
+
       <div class="temperature-mosquitoes text-center col-md-12">
         <div class="pie-temperature-mosquitoes col-md-4 col-xs-12">
           <canvas id="temperature-mosquitoes-canvas" width="300" height="300"></canvas>
@@ -69,6 +79,7 @@
           </div>
         </div>
       </div>
+
       <div class="text-center col-md-12">
         <div class="place-mosquitoes col-md-6">
           <div class="text-place-mosquitoes col-md-12">
@@ -80,6 +91,7 @@
             <canvas id="place-mosquitoes-canvas" width="300" height="300"></canvas>
           </div>
         </div>
+
         <div class="water-mosquitoes col-md-6">
           <div class="text-water-mosquitoes col-md-12">
             <div class="elements-text-water-mosquitoes">
@@ -91,13 +103,19 @@
           </div>
         </div>
       </div>
+
       <div class="picture-mosquitoes text-center col-md-12">
         <h3>Number of mosquitoes you take in picture: {{ ctrl.nbPictures }}</h3>
       </div>
+
     </li>
+
     <li id="projects-identification" class="projects-list-elements list-elements col-xs-12 col-md-12">
+
       <span class="col-xs-12"><h2>Number of elements identified <span>{{ ctrl.idNumber }}</span></h2></span>
+
       <div class="all-identification-area col-xs-12">
+
         <div id="wings-identification-area" class="mosquito-mapper-data-div col-xs-12 col-md-4">
           <p>
             <span id="wings-label-type-a">No Mosquitoes</span> : <span id="wings-value-type-a">{{ ctrl.wingsType1 }}</span><br>
@@ -108,6 +126,7 @@
             <canvas id="mosquitomapper-wings-canvas" width="300" height="300"></canvas>
           </div>
         </div>
+
         <div id="mouthpiece-identification-area" class="mosquito-mapper-data-div col-xs-12 col-md-4">
           <p>
             number of <span id="mouthpiece-label-type-a">Anophile</span> : <span id="mouthpiece-value-type-a">{{ ctrl.mouthpieceType1 }}</span><br>
@@ -118,6 +137,7 @@
             <canvas id="mosquitomapper-mouthpiece-canvas" width="300" height="300"></canvas>
           </div>
         </div>
+
         <div id="antennae-identification-area" class="mosquito-mapper-data-div col-xs-12 col-md-4">
           <p>
             number of <span id="antennae-label-type-a">Males</span> : <span id="antenae-value-type-a">{{ ctrl.antennaeType1 }}</span> <br>
@@ -128,7 +148,11 @@
             <canvas id="mosquitomapper-antennae-canvas" width="300" height="300"></canvas>
           </div>
         </div>
+
       </div>
+
     </li>
+
   </ul>
+
 </div>
