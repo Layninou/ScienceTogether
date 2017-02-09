@@ -20,7 +20,6 @@
 
     //Data attribut
     const rootRef = fireBlog.database().ref();
-    const testchild = rootRef.child("january 2017");
 
     //data we need
     var date = [];
@@ -38,7 +37,6 @@
       var keys = Object.keys(articles);
       for (var i = 0; i < keys.length; i++) {
         var k = keys[i];
-
         date.push(k);
 
         authorList.push(articles[k].author);
@@ -48,8 +46,8 @@
         var paragraphs = articles[k].paragraph;
         var oneArticle = [];
 
-        for (var i = 0; i < paragraphsKeys.length; i++) {
-          var eachElement = paragraphsKeys[i];
+        for (var j = 0; j < paragraphsKeys.length; j++) {
+          var eachElement = paragraphsKeys[j];
           oneArticle.push(paragraphs[eachElement]);
         }
 
@@ -58,6 +56,7 @@
 
       for (var i = 0; i < date.length; i++) {
         blogDataList.push({
+          date: date[i],
           title: titleList[i],
           author: authorList[i],
           paragraphs: articlesList[i]

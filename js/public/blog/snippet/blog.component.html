@@ -1,6 +1,8 @@
-<div class="article-blog col-xs-12">
-  <h2>{{ $ctrl.title }}</h2>
-  <h3>{{ $ctrl.author }}</h3>
+<div id="{{$ctrl.date}}" class="article-blog col-xs-12">
+  <div class="title-article-blog">
+    <h1>{{ $ctrl.title }}</h1>
+    <h4>by {{ $ctrl.author }}</h4>
+  </div>
   <p ng-repeat="p in $ctrl.blog">
     {{ p }}
   </p>

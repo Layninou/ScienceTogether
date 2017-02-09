@@ -11,6 +11,18 @@ body {
   color: #000;
   background-color: #FFF;
   font-family: 'Oxygen', sans-serif;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+body .container-fluid{
+  width: 100%;
+  height: 95%;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 .initial-loading {
@@ -47,6 +59,17 @@ body {
   background-color: #13DC4B;
   border-radius: 0;
   border: 0;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+}
+
+.footer div{
+  margin-bottom: 10px;
 }
 
 /** Loading **/

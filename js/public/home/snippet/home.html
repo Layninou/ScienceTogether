@@ -1,37 +1,48 @@
 <div id="home-section-content" class="container">
   <ul id="home-elements" class="elements">
     <!-- Begining Present Ourself -->
-    <li id="home-presentation" class="home-list-elements list-elements">
+    <li id="home-presentation" class="">
+
       <div id="home-presentation-left" class="home-elements-box home-presentation-box col-xs-12 col-md-6">
-        <div class="space"></div>
-        <div id="picture-camille" class="home-presentation-picture hidden-xs col-xs-1">
+
+        <div id="picture-camille" class="home-presentation-picture hidden-xs col-xs-12">
+          <img></img>
         </div>
+
         <div id="presentation-camille" class="home-presentation-text col-xs-12">
-          <h2>Camille Guilbaud</h2>
-          <p>
+          <h2 class="col-xs-12">Camille Guilbaud</h2>
+          <p class="col-xs-12">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
           </p>
         </div>
+
       </div>
+
       <div id="home-presentation-right" class="home-elements-box home-presentation-box col-xs-12 col-md-6">
+
+        <div id="picture-theophile" class="home-presentation-picture hidden-xs col-xs-12">
+          <img></img>
+        </div>
+
         <div id="presentation-theophile" class="home-presentation-text col-xs-12">
-          <h2 class="col-xs-6">Theophile Guilbaud</h2>
-          <p class="col-xs-6">
+          <h2 class="col-xs-12">Theophile Guilbaud</h2>
+          <p class="col-xs-12">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
           </p>
         </div>
-        <div id="picture-theophile" class="home-presentation-picture hidden-xs col-xs-1">
-        </div>
+
       </div>
+
     </li>
     <!-- End Present Ourself -->
 
     <!-- Begining Who are we? our company -->
-    <li id="home-company" class="home-list-elements list-elements">
+    <li id="home-company" class="">
+
       <div class="home-title home-company-title home-elements-box col-xs-12 col-md-3">
         <h3>Company</h3>
       </div>
@@ -45,11 +56,12 @@
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </div>
+
     </li>
     <!-- End Who are you -->
 
     <!-- Begining Ideology -->
-    <li id="home-ideology" class="home-list-elements list-elements">
+    <li id="home-ideology" class="">
       <div class="home-title home-ideology-title home-elements-box col-xs-12 col-md-3">
         <h3>Ideology</h3>
       </div>
@@ -67,19 +79,26 @@
     <!-- End Ideology -->
 
     <!-- Begining Projects -->
-    <li id="home-projects" class="home-list-elements list-elements">
+    <li id="home-projects" class="">
       <div class="home-title home-projects-title home-elements-box col-xs-12 col-md-3">
         <h3>Projects</h3>
       </div>
       <div class="home-section-content home-projects-content home-elements-box col-xs-12 col-md-9">
-        <span ui-sref="public.mosquitomapper">MosquitoMapper (Clic ici)</span>
+
+        <div id="mosquito-mapper" ui-sref="public.mosquitomapper" class="our-project col-xs-12">
+          <span>MosquitoMapper</span>
+        </div>
+        <div id="let-it-grow" ui-sref="" class="our-project col-xs-12">
+          <span>Let it grow</span>
+        </div>
       </div>
+
     </li>
     <!-- End Projects -->
 
     <!-- Begining Blog -->
-    <li id="home-blog" class="home-list-elements list-elements col-xs-12 col-md-12 text-center">
-      <h2 ui-sref="public.blog">Blog</h2>
+    <li id="home-blog" ui-sref="public.blog" class="col-xs-12 col-md-12 text-center">
+      <h2>Blog</h2>
     </li>
     <!-- End Blog -->
 

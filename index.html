@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <link rel="stylesheet" href="css/public.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/mosquitomapper.css">
@@ -22,9 +23,11 @@
     <!-- Fixed position loading indicator -->
     <loading class="loading-indicator"></loading>
 
-    <ui-view></ui-view>
+    <div class="container-fluid">
+      <ui-view></ui-view>
+    </div>
 
-    <footer class="panel-footer">
+    <footer class="footer navbar-fixed_bottom panel-footer">
       <div class="text-center">&copy; Copyright ScienceTogether</div>
     </footer>
 
