@@ -14,20 +14,41 @@
   padding: 0;
 }
 
-.projects-presentation-title{
-  float: right;
-  height: 100%;
-  background-color: #DAC540;
-}
-
 .projects-presentation-content{
   height: 100%;
-  background-color: #D8BF23;
+  background-color: #ded6a5;
+}
+
+/*PROJECT*/
+#projects-presentation{
+  padding: 0;
+}
+
+#projects-presentation h2{
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+#projects-presentation h4{
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+#projects-presentation p{
+  text-align: justify;
+}
+
+#projects-presentation img{
+  float: right;
 }
 
 /*QUIZZ*/
 #projects-quizz{
-  background-color: #D2D823;
+  background-color: #c8e8c8;
 }
 
 .map-mosquitoes-mapper{
@@ -92,9 +113,9 @@
   position: relative;
 }
 
-#temperature-mosquitoes-canvas{
+/*#temperature-mosquitoes-canvas{
   background-color: #D2D823;
-}
+}*/
 
 .text-temperature-mosquitoes{
   height: 300px;
@@ -128,42 +149,53 @@
 /*IDENTIFICATION*/
 #projects-identification{
   text-align: center;
-  background-color: #D8BF23;
+  background-color: #c5d2c6;
 
 }
 
 .pie-identification canvas{
-  background-color: #FF69B4;
+  background-color: #c79ab1;
   border-radius: 25px;
 }
 
 #antennae-identification-area{
   padding: 15px;
   border-style: solid;
-  border-color: #D8BF23;
+  border-color: #c5d2c6;
   border-radius: 25px;
-  background-color: #FF69B4;
+  background-color: #c79ab1;
 }
 
 #mouthpiece-identification-area{
   padding: 15px;
   border-style: solid;
-  border-color: #D8BF23;
+  border-color: #c5d2c6;
   border-radius: 25px;
-  background-color: #FF69B4;
+  background-color: #c79ab1;
 }
 
 #wings-identification-area{
   padding: 15px;
   border-style: solid;
-  border-color: #D8BF23;
+  border-color: #c5d2c6;
   border-radius: 25px;
-  background-color: #FF69B4;
+  background-color: #c79ab1;
 }
 
 
 /********** Extra Large devices only **********/
 @media (min-width: 1800px) {
+
+/*PROJECT*/
+#projects-presentation{
+  height: 90vh;
+}
+
+#projects-presentation img{
+  float: right;
+  width: 25vw;
+  height: 25vw;
+}
 
 /*QUIZZ*/
 #projects-quizz{
@@ -181,9 +213,9 @@
 }
 
 #map-mosquitoes{
-  margin-left: 350px;
+  /*margin-left: 350px;
   width: 1800px;
-  height: 800px;
+  height: 800px;*/
 }
 
 /*IDENTIFICATION*/
@@ -205,9 +237,20 @@
 /********** Extra Large devices only **********/
 @media (min-width: 1440px) and (max-width: 1799px){
 
+  /*PROJECT*/
+  #projects-presentation{
+    height: 90vh;
+  }
+
+  #projects-presentation img{
+    float: right;
+    width: 25vw;
+    height: 25vw;
+  }
+
   /*QUIZZ*/
   #projects-quizz{
-    height: 2470px;
+    height: 350vh;
   }
 
   #projects-quizz h2{
@@ -221,14 +264,13 @@
   }
 
   #map-mosquitoes{
-    margin-left: 50px;
-    width: 1300px;
-    height: 500px;
+    /*width: 1300px;
+    height: 500px;*/
   }
 
   /*IDENTIFICATION*/
   #projects-identification{
-    height: 580px;
+    height: 80vh;
   }
 
   #projects-identification h2{
@@ -245,9 +287,19 @@
 /********** Large devices only **********/
 @media (min-width: 1200px) and (max-width: 1439px){
 
+/*PROJECT*/
+#projects-presentation{
+  height: 90vh;
+}
+
+#projects-presentation img{
+  width: 25vw;
+  height: 25vw;
+}
+
 /*QUIZZ*/
 #projects-quizz{
-  height: 2470px;
+  height: 350vh;
 }
 
 #projects-quizz h2{
@@ -261,9 +313,9 @@
 }
 
 #map-mosquitoes{
-  margin-left: 25px;
+  /*margin-left: 25px;
   width: 1300px;
-  height: 500px;
+  height: 500px;*/
 }
 
 /*IDENTIFICATION*/
@@ -285,9 +337,19 @@
 /********** Medium devices only **********/
 @media (min-width: 992px) and (max-width: 1199px) {
 
+/*PROJECT*/
+#projects-presentation{
+  height: 100vh;
+}
+
+#projects-presentation img{
+  width: 30vw;
+  height: 30vw;
+}
+
 /*QUIZZ*/
 #projects-quizz{
-  height: 2370px;
+  height: 330vh;
 }
 
 #projects-quizz h2{
@@ -297,9 +359,9 @@
 }
 
 #map-mosquitoes{
-  margin-left: 5px;
+  /*margin-left: 5px;
   width: 950px;
-  height: 400px;
+  height: 400px;*/
 }
 
 #daytime-mosquitoes-canvas{
@@ -309,7 +371,7 @@
 
 /*IDENTIFICATION*/
 #projects-identification{
-  height: 500px;
+  height: 80vh;
 }
 
 #projects-identification h2{
@@ -321,9 +383,20 @@
   /********** Small devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
 
+
+  /*PROJECT*/
+  #projects-presentation{
+    height: 100vh;
+  }
+
+  #projects-presentation img{
+    width: 30vw;
+    height: 30vw;
+  }
+
   /*QUIZZ*/
   #projects-quizz{
-    height: 3570px;
+    height: 490vh;
   }
 
   #projects-quizz h2{
@@ -333,9 +406,9 @@
   }
 
   #map-mosquitoes{
-    margin-left: 85px;
+    /*margin-left: 85px;
     width: 750px;
-    height: 400px;
+    height: 400px;*/
   }
 
   #daytime-mosquitoes-canvas{
@@ -374,11 +447,44 @@
 /********** Extra small devices only **********/
 @media (max-width: 767px) {
 
+  /*PROJECT*/
+  #projects-presentation{
+    height: 165vh;
+  }
+
+  #projects-presentation img{
+    width: 100%;
+  }
+
+  /*QUIZZ*/
+  #projects-quizz{
+    height: 490vh;
+  }
+
+  #daytime-mosquitoes-canvas{
+    width: 500px;
+    height: 300px;
+  }
+
+  /*IDENTIFICATION*/
+  #projects-identification{
+    height: 180vh;
+  }
 
 }
 
 /********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
 @media (max-width: 479px) {
+
+  /*PROJECT*/
+  #projects-presentation{
+    height: 195vh;
+  }
+
+  /*QUIZZ*/
+  #projects-quizz{
+    height: 490vh;
+  }
 
 
 }

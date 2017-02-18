@@ -26,15 +26,38 @@ function MosquitoMapperFireCtrl($timeout, MosquitoMapperFireService, MosquitoMap
     $ctrl.wingsType1 = 0;
     $ctrl.wingsType2 = 0;
 
+    var progressBar;
+
     //init DOM (because this code is not beautiful)
     $timeout(function () {
       MosquitoMapperPieService.init();
       MosquitoMapperGraphService.init();
       MosquitoMapperMapService.init();
+
+      progressBar = document.getElementById("MosquitoProgress");
+      progressBar.setAttribute("style","width: 5%");
+      progressBar.innerHTML = "Loading Data";
     }, 10);
+
+    //Progress Bar
+    $timeout(function () {
+      progressBar.setAttribute("style","width: 25%");
+    }, 1000);
+
+    $timeout(function () {
+      progressBar.setAttribute("style","width: 50%");
+    }, 2000);
+
+    $timeout(function () {
+      progressBar.setAttribute("style","width: 75%");
+    }, 3000);
+
 
     //after database is load
     $timeout(function () {
+      progressBar.setAttribute("style","width: 100%");
+      progressBar.innerHTML = "Data Loaded";
+
       //number of object in quizzs
       $ctrl.quizzNumber = MosquitoMapperFireService.getNumberQuizz();
       $ctrl.nbPictures = MosquitoMapperFireService.getNumberPicture();
@@ -79,7 +102,7 @@ function MosquitoMapperFireCtrl($timeout, MosquitoMapperFireService, MosquitoMap
       MosquitoMapperPieService.createAntennaePie(antennaeData);
       MosquitoMapperPieService.createMouthpiecePie(mouthpieceData);
       MosquitoMapperPieService.createWingsPie(wingsData);
-    }, 5000);
+    }, 4000);
 }
 
 })();
