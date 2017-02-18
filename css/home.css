@@ -14,11 +14,25 @@
   border: 0;
 }
 
+/*COLOR*/
+#home-presentation{
+  background-image: url("/images/dodge_wait_till_our_picture.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(20%);
+  filter: grayscale(100%);
+  background-color: #91e0e6;
+}
+#home-company{background-color: #ded6a5}
+#home-ideology{background-color: #99e387}
+#home-projects{background-color: #ded6a5}
+#home-blog{background-color: #91e0e6}
+
+/*ELEMENTS*/
 #home-presentation{
   position: relative;
   width: 100%;
   height: 90vh;
-  background-color: red;
   overflow: hidden;
 }
 
@@ -26,7 +40,6 @@
   position: relative;
   width: 100%;
   height: 90vh;
-  background-color: blue;
   overflow: hidden;
 }
 
@@ -34,7 +47,6 @@
   position: relative;
   width: 100%;
   height: 90vh;
-  background-color: red;
   overflow: hidden;
 }
 
@@ -42,7 +54,6 @@
   position: relative;
   width: 100%;
   height: 70vh;
-  background-color: blue;
   overflow: hidden;
 }
 
@@ -50,7 +61,6 @@
   position: relative;
   width: 100%;
   height: 20vh;
-  background-color: red;
   overflow: hidden;
 }
 
