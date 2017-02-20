@@ -63,6 +63,18 @@ body .container-fluid::-webkit-scrollbar {
   text-shadow: 1px 1px 1px #909090;
 }
 
+#collapsable-nav{
+  float: right;
+  text-align: right;
+  color: black;
+}
+#nav-list li{
+  float: right;
+}
+#nav-list h3{
+ padding: 5px;
+}
+
 /** Footer **/
 .panel-footer {
   background-color: #13DC4B;

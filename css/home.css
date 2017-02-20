@@ -153,6 +153,11 @@
       transform: translate(20vw,30vh);
     }
 
+    #mosquito-mapper{
+      background-image: url("/images/mosquitomapper_logo.png");
+      background-size: cover;
+    }
+
     .our-project{
       position: relative;
       margin: 15px;
@@ -266,10 +271,15 @@
       transform: translate(20vw,30vh);
     }
 
+    #mosquito-mapper{
+      background-image: url("/images/mosquitomapper_logo.png");
+      background-size: cover;
+    }
+
     .our-project{
       position: relative;
       margin: 15px;
-      background: grey;
+      background: darkgray;
       width: 20vw;
       height: 50vh;
       transform: translate(20vw,10vh);
@@ -378,10 +388,15 @@
       transform: translate(20vw,30vh);
     }
 
+    #mosquito-mapper{
+      background-image: url("/images/mosquitomapper_logo.png");
+      background-size: cover;
+    }
+
     .our-project{
       position: relative;
       margin: 15px;
-      background: grey;
+      background-color: darkgrey;
       width: 20vw;
       height: 50vh;
       transform: translate(20vw,10vh);
@@ -490,6 +505,11 @@
       font-size: 2.9em;
       font-weight: bold;
       transform: translate(20vw,30vh);
+    }
+
+    #mosquito-mapper{
+      background-image: url("/images/mosquitomapper_logo.png");
+      background-size: cover;
     }
 
     .our-project{
@@ -622,6 +642,11 @@
       transform: translate(0vw,15vh);
     }
 
+    #mosquito-mapper{
+      background-image: url("/images/mosquitomapper_logo.png");
+      background-size: cover;
+    }
+
     .our-project{
       position: relative;
       margin: 20px;
@@ -750,6 +775,11 @@
       font-weight: bold;
       text-align: center;
       transform: translate(0vw,15vh);
+    }
+
+    #mosquito-mapper{
+      background-image: url("/images/mosquitomapper_logo.png");
+      background-size: cover;
     }
 
     .our-project{

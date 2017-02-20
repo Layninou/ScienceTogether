@@ -17,7 +17,9 @@ function routeConfig ($stateProvider) {
     })
     .state('public.home', {
       url: '/',
-      templateUrl: 'js/public/home/snippet/home.html'
+      templateUrl: 'js/public/home/snippet/home.html',
+      controller: 'HomeController',
+      controllerAs: 'homeCtrl'
     })
   //MosquitoMapper view
     .state('public.mosquitomapper',{

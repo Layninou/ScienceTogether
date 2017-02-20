@@ -38,6 +38,11 @@
   font-size: 1.2em;
 }
 
+#list-blog a{
+  text-decoration: none;
+  color: black
+}
+
 
 /********** Extra Large devices only **********/
 @media (min-width: 1800px) {}

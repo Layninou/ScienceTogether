@@ -10,7 +10,7 @@
     <div class="sidebar-nav-fixed affix">
       <div class="well">
         <ul class="nav">
-          <li ng-repeat="l in ctrl.listData"><a href="#{{ l }}">{{ l }}</a></li>
+          <li ng-repeat="l in ctrl.listData"><a ng-click="ctrl.gotoId(l)">{{ l }}</a></li>
         </ul>
       </div>
     </div>
