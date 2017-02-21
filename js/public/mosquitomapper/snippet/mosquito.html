@@ -1,24 +1,21 @@
 <link rel="stylesheet" href="css/navbar.mosquitomapper.css">
 
-<!-- <div id="collapsable-nav" class="collapse navbar-collapse">
+<div id="collapsable-nav" class="collapse navbar-collapse" ng-controller="MosquitoMapperFireCtrl as ctrl">
   <ul id="nav-list" class="nav navbar-nav navbar-fixed-top">
     <li>
-      <h3 href="#home-ideology">Identification</h3>
+      <h3 ng-click="ctrl.gotoId('projects-identification')">Identification</h3>
     </li>
     <li>
-      <h3 href="#home-ideology">Mosquito data</h3>
+      <h3 ng-click="ctrl.gotoId('project-stat')">Mosquito data</h3>
     </li>
     <li>
-      <h3 href="#home-project">Daytime data</h3>
+      <h3 ng-click="ctrl.gotoId('projects-quizz')">Map</h3>
     </li>
     <li>
-      <h3 href="#home-project">Map</h3>
-    </li>
-    <li>
-      <h3 href="#home-project">What's that?</h3>
+      <h3 ng-click="ctrl.gotoId('projects-presentation')">What's that?</h3>
     </li>
   </ul>
-</div> -->
+</div>
 
 
 <div id="mosquito-mapper-content" class="container" ng-controller="MosquitoMapperFireCtrl as ctrl">
@@ -62,7 +59,7 @@
       </div>
 
       <!-- Error here about data -->
-      <div class="number-mosquitoes text-center col-md-12">
+      <div id="project-stat" class="number-mosquitoes text-center col-md-12">
         <div class="pie-number-mosquitoes col-md-4 col-xs-12">
           <canvas id="number-mosquitoes-canvas" width="300" height="300"></canvas>
         </div>

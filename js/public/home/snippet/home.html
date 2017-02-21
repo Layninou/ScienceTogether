@@ -1,16 +1,21 @@
+<link rel="stylesheet" href="css/navbar.home.css">
+
 <div id="collapsable-nav" class="collapse navbar-collapse">
   <ul id="nav-list" class="nav navbar-nav navbar-fixed-top">
     <li>
-      <h3 href="#home-ideology">Project</h3>
+      <h3 ui-sref="public.blog">Blog</h3>
     </li>
     <li>
-      <h3 href="#home-project">Ideology</h3>
+      <h3 ng-click="homeCtrl.gotoId('home-projects')">Project</h3>
     </li>
     <li>
-      <h3 href="#home-project">Company</h3>
+      <h3 ng-click="homeCtrl.gotoId('home-ideology')">Ideology</h3>
     </li>
     <li>
-      <h3 href="#home-project">Presentation</h3>
+      <h3 ng-click="homeCtrl.gotoId('home-company')">Company</h3>
+    </li>
+    <li>
+      <h3 ng-click="homeCtrl.gotoId('home-presentation')">Presentation</h3>
     </li>
   </ul>
 </div>

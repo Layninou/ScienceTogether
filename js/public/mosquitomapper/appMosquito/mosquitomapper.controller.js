@@ -6,9 +6,14 @@
 angular.module('appMosquito')
 .controller('MosquitoMapperFireCtrl', MosquitoMapperFireCtrl);
 
-MosquitoMapperFireCtrl.$inject = ['$timeout', 'MosquitoMapperFireService', 'MosquitoMapperPieService','MosquitoMapperGraphService', 'MosquitoMapperMapService'];
-function MosquitoMapperFireCtrl($timeout, MosquitoMapperFireService, MosquitoMapperPieService,MosquitoMapperGraphService, MosquitoMapperMapService) {
+MosquitoMapperFireCtrl.$inject = ['$timeout','$location', '$anchorScroll', 'MosquitoMapperFireService', 'MosquitoMapperPieService','MosquitoMapperGraphService', 'MosquitoMapperMapService'];
+function MosquitoMapperFireCtrl($timeout, $location, $anchorScroll, MosquitoMapperFireService, MosquitoMapperPieService,MosquitoMapperGraphService, MosquitoMapperMapService) {
     var $ctrl = this;
+
+    $ctrl.gotoId = function(elmt){
+      $location.hash(elmt);
+      $anchorScroll();
+    };
 
     //Quizz
     $ctrl.quizzNumber = 0;

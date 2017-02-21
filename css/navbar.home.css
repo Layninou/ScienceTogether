@@ -1,33 +1,7 @@
-/** Header **/
-#header-nav {
-  background-color: #13DC4B;
-  border-radius: 0;
-  border: 0;
-}
-
-.navbar{
-  /*text-align: center;*/
-  margin: 0;
-}
-
-.navbar-header {
-  padding-top: 0px;
-  float:none;
-}
-
-.navbar-header h1 {
-  color: #000;
-  margin-left: 5px;
-  /*text-align: center;*/
-  text-transform: uppercase;
-  font-weight: bold;
-  font-style: italic;
-  text-shadow: 1px 1px 1px #909090;
-}
-
 #nav-list h3:hover{
   color: #FFF;
 }
+
 
 /********** Extra Large devices only **********/
 @media (min-width: 1800px) {
@@ -70,7 +44,7 @@
 }
 
 /********** Small devices only **********/
-@media (min-width: 767px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
 
   #nav-list{
     visibility: hidden;
