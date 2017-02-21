@@ -7,8 +7,10 @@
     bindings: {
       title: '<',
       author: '<',
+      time: '<',
       date: '<',
-      blog: '<'
+      blog: '<',
+      ref: '<'
     }
   });
 

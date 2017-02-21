@@ -3,7 +3,10 @@
 <div id="container-blog" ng-controller="BlogFireCtrl as ctrl">
 
   <div id="articles-blog" class="col-md-8">
-    <article-blog ng-repeat="list in ctrl.blogData" title="list.title" author="list.author" date="list.date" blog="list.paragraphs"></article-blog>
+    <article-blog ng-repeat="list in ctrl.blogData" title="list.title" time="list.time"
+    author="list.author" date="list.date" blog="list.paragraphs" ref="list.references">
+
+    </article-blog>
   </div>
 
   <div id="list-blog" class="col-md-2 pull-right">

@@ -1,9 +1,21 @@
 <div id="{{$ctrl.date}}" class="article-blog col-xs-12">
+
   <div class="title-article-blog">
     <h1>{{ $ctrl.title }}</h1>
     <h4>by {{ $ctrl.author }}</h4>
+    <h6 ng-if="$ctrl.time !== 0">({{ $ctrl.time }})</h6>
   </div>
-  <p ng-repeat="p in $ctrl.blog">
-    {{ p }}
-  </p>
+
+  <div class="paragraphs-article-blog">
+    <p ng-repeat="p in $ctrl.blog">
+      {{ p }}
+    </p>
+  </div>
+
+  <div class="references-article-blog">
+    <span>References:</span>
+    <p ng-repeat="r in $ctrl.ref">
+      {{$index + 1}} : <a href="{{r}}">{{r}}</a>
+    </p>
+  </div>
 </div>

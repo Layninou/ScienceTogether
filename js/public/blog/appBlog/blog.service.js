@@ -25,8 +25,10 @@
     var date = [];
     var authorList = [];
     var titleList = [];
+    var timeList = [];
     var articlesList = [];
     var blogDataList =[];
+    var referenceList = [];
 
     //set Articles
     rootRef.on('value',blogData,blogErr);
@@ -39,32 +41,76 @@
         var k = keys[i];
         date.push(k);
 
-        authorList.push(articles[k].author);
-        titleList.push(articles[k].title);
-
-        var paragraphsKeys = Object.keys(articles[k].paragraph);
-        var paragraphs = articles[k].paragraph;
-        var oneArticle = [];
-
-        for (var j = 0; j < paragraphsKeys.length; j++) {
-          var eachElement = paragraphsKeys[j];
-          oneArticle.push(paragraphs[eachElement]);
+        //author
+        if (articles[k].author !== undefined) {
+          authorList.push(articles[k].author);
+        }
+        else {
+          authorList.push(0);
         }
 
-        articlesList.push(oneArticle);
+        //title
+        if (articles[k].title !== undefined) {
+          titleList.push(articles[k].title);
+        }
+        else {
+          titleList.push(0);
+        }
+
+        //time
+        if (articles[k].time !== undefined) {
+          timeList.push(articles[k].time);
+        }
+        else {
+          timeList.push(0);
+        }
+
+        //Article with paragraph
+        if (articles[k].paragraph !== undefined) {
+          var paragraphsKeys = Object.keys(articles[k].paragraph);
+          var paragraphs = articles[k].paragraph;
+          var oneArticle = [];
+
+          for (var j = 0; j < paragraphsKeys.length; j++) {
+            var eachElement = paragraphsKeys[j];
+            oneArticle.push(paragraphs[eachElement]);
+          }
+
+          articlesList.push(oneArticle);
+        }
+        else {
+          articlesList.push({});
+        }
+
+
+        //All reference
+        if ( articles[k].reference !== undefined) {
+          var referencesKeys = Object.keys(articles[k].reference);
+          var references = articles[k].reference;
+          var oneReference = [];
+
+          for (var k = 0; k < referencesKeys.length; k++) {
+            var eachElement = referencesKeys[k];
+            oneReference.push(references[eachElement]);
+          }
+
+          referenceList.push(oneReference);
+        }
+        else {
+          referenceList.push({});
+        }
       }
 
       for (var i = 0; i < date.length; i++) {
         blogDataList.push({
           date: date[i],
           title: titleList[i],
+          time: timeList[i],
           author: authorList[i],
-          paragraphs: articlesList[i]
+          paragraphs: articlesList[i],
+          references: referenceList[i]
         });
       }
-
-
-
     }
 
     function blogErr(err) {
