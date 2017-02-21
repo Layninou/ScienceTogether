@@ -72,8 +72,8 @@ function MosquitoMapperFireCtrl($timeout, $location, $anchorScroll, MosquitoMapp
       var sizeData = MosquitoMapperFireService.getArraySize();
       var temperatureData = MosquitoMapperFireService.getArrayTemperature();
       MosquitoMapperPieService.createTemperaturePie(temperatureData);
-      MosquitoMapperPieService.createNumberPie([10,10,10,10]);
-      MosquitoMapperPieService.createSizePie([10,10,10]);
+      MosquitoMapperPieService.createNumberPie(numberData);
+      MosquitoMapperPieService.createSizePie(sizeData);
 
       //Create Graph about Quizz
       var daytimeData = MosquitoMapperFireService.getDayTime();

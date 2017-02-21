@@ -95,7 +95,6 @@ function MosquitoMapperFireService($q, $firebaseObject, $firebaseArray) {
   quizzsRef.on('value',gotQuizzData, errQuizzData);
 
   function gotQuizzData(data) {
-    console.log("Test Service Localisation");
 
     var quizzs = data.val();
     var keys = Object.keys(quizzs);
@@ -152,23 +151,6 @@ function MosquitoMapperFireService($q, $firebaseObject, $firebaseArray) {
       mosquitoTime[daytime]++;
 
     }
-
-    console.log("All the Latitude: ");
-    console.log(allLatitude);
-    console.log("All the Longitude: ");
-    console.log(allLongitude);
-    console.log("Daytime array of mosquito take: ");
-    console.log(mosquitoTime);
-    console.log("Temperature around mosquito: ");
-    console.log("Less than 0C: ", mosquitoTemperature0);
-    console.log("Less than 10C: ", mosquitoTemperature10);
-    console.log("Less than 20C: ", mosquitoTemperature20);
-    console.log("More than 20C: ", mosquitoTemperatureUpper);
-    console.log("Mosquito inside vs outide: ", mosquitoInside, mosquitoOutside);
-    console.log("With water around (Y/N): ", mosquitoWaterYes, mosquitoWaterNo);
-    console.log("Picture take: ", mosquitoWithPicture);
-
-    console.log("End Test Service Localisation");
   }
 
   function errQuizzData(err) {
@@ -180,7 +162,6 @@ function MosquitoMapperFireService($q, $firebaseObject, $firebaseArray) {
   identificationsRef.on('value',gotIdenData, errIdenData);
 
   function gotIdenData(data) {
-    console.log("Test Service Identification");
     var identif = data.val();
     var keys = Object.keys(identif)
     for (var i = 0; i < keys.length; i++) {
@@ -201,10 +182,6 @@ function MosquitoMapperFireService($q, $firebaseObject, $firebaseArray) {
       if (mouthpiece === 2) { mouthpieceType2++; }
       if (wings === 2) { wingsType2++; }
     }
-    console.log("Antennae : ", noneOfTheAboveAntennae, antennaeType1, antennaeType2);
-    console.log("Mouthpiece : ", noneOfTheAboveMouthpiece, mouthpieceType1, mouthpieceType2);
-    console.log("Wings : ", noneOfTheAboveWings, wingsType1, wingsType2);
-    console.log("End Test Service Identification");
   }
 
   function errIdenData(err) {
