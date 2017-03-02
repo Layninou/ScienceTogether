@@ -14,9 +14,14 @@
   padding: 0;
 }
 
+/*COLOR*/
+.projects-presentation-content{background-color: #ded6a5;}
+#projects-quizz{background-color: #c8e8c8;}
+#projects-identification{background-color: #c5d2c6;}
+/*If change the identification color think about change the area */
+
 .projects-presentation-content{
   height: 100%;
-  background-color: #ded6a5;
 }
 
 /*PROJECT*/
@@ -47,10 +52,6 @@
 }
 
 /*QUIZZ*/
-#projects-quizz{
-  background-color: #c8e8c8;
-}
-
 .map-mosquitoes-mapper{
   text-align: center;
 }
@@ -149,8 +150,6 @@
 /*IDENTIFICATION*/
 #projects-identification{
   text-align: center;
-  background-color: #c5d2c6;
-
 }
 
 .pie-identification canvas{

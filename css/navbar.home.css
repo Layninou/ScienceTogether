@@ -46,8 +46,51 @@
 /********** Small devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
 
-  #nav-list{
+  /*#nav-list{
     visibility: hidden;
+  }*/
+
+  #header-nav {
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .navbar-header h1{
+    float: left;
+  }
+
+  .navbar-toggle{
+    display: block;
+  }
+  #navbarToggle{
+    display: block;
+    margin-top: 25px;
+    float: right;
+  }
+  .navbar-collapse {
+
+  }
+  .navbar-nav li{
+    float: none;
+  }
+  #nav-list{
+    background-color: #13DC4B;
+    transform: translateY(60px);
+  }
+  #nav-list li{
+    float: none;
+  }
+  #collapsable-nav{
+    float: right;
+    text-align: center;
+    color: black;
+    height: 100px;
+  }
+  .navbar-collapse.collapse {
+    display: block;
+  }
+  #nav-list{
+    display: block;
   }
 
 }

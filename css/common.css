@@ -25,6 +25,13 @@ body .container-fluid{
   border: 0;
 }
 
+/*COLOR*/
+#header-nav{background-color: #13DC4B;}
+.panel-footer{background-color: #13DC4B;}
+
+
+
+
 .initial-loading {
   margin-top: 60px;
 }
@@ -38,7 +45,6 @@ body .container-fluid::-webkit-scrollbar {
 
 /** Header **/
 #header-nav {
-  background-color: #13DC4B;
   border-radius: 0;
   border: 0;
 }
@@ -77,7 +83,6 @@ body .container-fluid::-webkit-scrollbar {
 
 /** Footer **/
 .panel-footer {
-  background-color: #13DC4B;
   border-radius: 0;
   border: 0;
 }
