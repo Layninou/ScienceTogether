@@ -14,7 +14,7 @@ function MosquitoMapperPieService() {
   var colorIdentificationList = ["#99FF77","#1A75FF","#FF5050"];
   var colorTemperature = ["#1a1aff","#8080FF","#FF9999","#FF0000"];
   var colorNumber = ["#FF8566","#FF3300","#FF3333","#B30000"];
-  var colorSize = ["#FF33FF","#FF1AFF","#990099"];
+  var colorSize = ["#80BFFF","#0066CC","#003366"];
 
   //Canvas and Context Attributs
   var canvasAntennae, canvasMouthpiece, canvasWings, canvasTemperature, canvasNumberMosquitoes, canvasSize;
